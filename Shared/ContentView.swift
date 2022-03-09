@@ -6,16 +6,54 @@
 //
 
 import SwiftUI
+import SwiftUICharts
 
 struct ContentView: View {
+    @State var tabIndex:Int = 0
+    @State var visit = UserDefaults.standard.bool(forKey: "visit")
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            TabView(selection: $tabIndex){
+                BackExtensionView().tabItem{
+                    Group{
+                        Image("h3")
+                        Text("BackExtension")
+                    }
+                }.tag(0)
+                SumView()
+                    .tabItem{
+                    Group{
+                        Image(systemName: "chart.bar")
+                        Text("Charts")
+                    }
+                }.tag(1)
+                SquatsView().tabItem{
+                    Group{
+                        Image("s3")
+                        Text("Squats")
+                    }
+                }
+            }.padding(.bottom)
+                .fullScreenCover(isPresented: $visit, content: {
+                    TutorialView(visit: $visit)
+                })
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+func setup(){
+    let visit = UserDefaults.standard.bool(forKey: "visit")
+    if visit {
+        print("二回目以降")
+        UserDefaults.standard.set(false, forKey: "visit")
+    } else {
+        print("初回起動")
+        UserDefaults.standard.set(true, forKey: "visit")
     }
 }
