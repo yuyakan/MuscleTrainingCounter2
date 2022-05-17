@@ -15,9 +15,9 @@ struct TutorialView: View {
         VStack{
             TabView(selection: $selection,
                 content: {
-                    Tutorial1View()
+                AirpodsSettingTutorialView()
                         .tag(1)
-                    Tutorial2View()
+                    CompleteTutorialView()
                         .tag(2)
             })
                 .tabViewStyle(PageTabViewStyle())

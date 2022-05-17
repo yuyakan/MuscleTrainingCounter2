@@ -10,23 +10,22 @@ import CoreMotion
 import SwiftUI
 import AVFoundation
 
-class View2Controller: UIViewController, CMHeadphoneMotionManagerDelegate, ObservableObject{
+class SquatsController: UIViewController, CMHeadphoneMotionManagerDelegate, ObservableObject{
     @Published var counter = 0
-    @Published var array: [Double] = [0.0]
-    @Published var arrayW: [Double] = [0.0]
-    @Published var arrayM: [Double] = [0.0]
+    @Published var daySumCount: [Double] = [0.0]
+    @Published var weekSumCount: [Double] = [0.0]
+    @Published var monthSumCount: [Double] = [0.0]
     
-    let Airpods = CMHeadphoneMotionManager()
+    let airpods = CMHeadphoneMotionManager()
     
-    var number = 0
-    var alls : Double = 0
-    var alls_m : Double = 0
-    var flag = true
-    var flag_m = false
+    var sumPlusAcceleration : Double = 0
+    var sumMinusAcceleration : Double = 0
+    var plusCountFlag = true
+    var minusCountFlag = false
     
     func startCalc(){
         print("start")
-        Airpods.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {[weak self] motion, error  in
+        airpods.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {[weak self] motion, error  in
             guard let motion = motion else { return }
             self?.getDataAccel(motion)
         })
@@ -34,30 +33,29 @@ class View2Controller: UIViewController, CMHeadphoneMotionManagerDelegate, Obser
     
     func getDataAccel(_ data: CMDeviceMotion){
         let z = data.userAcceleration.z
-        if (z > 0.0 && flag == true){
-            alls += z
-            print(alls)
-        }else if(z < 0.0 && flag_m == true){
-            alls_m += z
+        if (z > 0.0 && plusCountFlag == true){
+            sumPlusAcceleration += z
+            print(sumPlusAcceleration)
+        }else if(z < 0.0 && minusCountFlag == true){
+            sumMinusAcceleration += z
         }
-        if (alls > 2.0){
-            flag_m = true
-            alls = 0.0
-            alls_m = 0.0
+        if (sumPlusAcceleration > 2.0){
+            minusCountFlag = true
+            sumPlusAcceleration = 0.0
+            sumMinusAcceleration = 0.0
         }
-        if (alls_m < -3.0 && flag_m == true){
+        if (sumMinusAcceleration < -3.0 && minusCountFlag == true){
             counter += 1
-            flag = true
-            flag_m = false
-            alls = 0.0
-            alls_m = 0.0
-            number += 1
+            plusCountFlag = true
+            minusCountFlag = false
+            sumPlusAcceleration = 0.0
+            sumMinusAcceleration = 0.0
         }
     }
     
     func stopCalc(){
         print("stop")
-        Airpods.stopDeviceMotionUpdates()
+        airpods.stopDeviceMotionUpdates()
     }
     
     func plus(){
@@ -75,82 +73,79 @@ class View2Controller: UIViewController, CMHeadphoneMotionManagerDelegate, Obser
     let UD = UserDefaults.standard
     var valueToSave: [Double] = []
     var temp: Double = 0.0
-    let formatter = DateFormatter()
-    let formatter_m = DateFormatter()
+    let dayFormatter = DateFormatter()
+    let monthFormatter = DateFormatter()
     func saveDate(){
-        formatter.dateFormat = "yyyy/MM/dd"
-        formatter_m.dateFormat = "yyyy/MM"
+        dayFormatter.dateFormat = "yyyy/MM/dd"
+        monthFormatter.dateFormat = "yyyy/MM"
         
-        let now_day = Date(timeIntervalSinceNow: 60 * 60 * 9)
+        let date = Date(timeIntervalSinceNow: 60 * 60 * 9)
         
-        var judge = Bool()
-        var judge_w = Bool()
-        var judge_m = Bool()
+        var dayCountFlag = Bool()
+        var weekCountFlag = Bool()
+        var monthCountFlag = Bool()
 
         var daySpan = 0
         var weekSpan = 0
 
         if UD.object(forKey: "today_p") != nil {
-            let past_day = UD.object(forKey: "today_p") as! Date
-            let now = formatter.string(from: now_day)
-            let past = formatter.string(from: past_day)
-            let span = now_day.timeIntervalSince(past_day)
+            let pastDay = UD.object(forKey: "today_p") as! Date
+            let now = dayFormatter.string(from: date)
+            let past = dayFormatter.string(from: pastDay)
+            let span = date.timeIntervalSince(pastDay)
             daySpan = Int(span/60/60/24)
             
-            let now_m = formatter_m.string(from: now_day)
-            let past_m = formatter_m.string(from: past_day)
+            let thisMonth = monthFormatter.string(from: date)
+            let pastMonth = monthFormatter.string(from: pastDay)
             
-            let thisWeekDay = Calendar.current.dateComponents([.weekday], from: now_day).weekday!
-            let n = thisWeekDay - 1
-            let now_ = Calendar.current.date(byAdding: .day, value: -n, to: now_day)!
-            let now_w = formatter.string(from: now_)
-            let thisWeekDay_p = Calendar.current.dateComponents([.weekday], from: past_day).weekday!
-            let n_p = thisWeekDay_p - 1
-            let past_ = Calendar.current.date(byAdding: .day, value: -n_p, to: past_day)!
-            let past_w = formatter.string(from: past_)
-            let span_w = now_.timeIntervalSince(past_)
-            weekSpan = Int(span_w/60/60/24/7)
+            let thisWeekDay = Calendar.current.dateComponents([.weekday], from: date).weekday! - 1
+            let now_ = Calendar.current.date(byAdding: .day, value: -thisWeekDay, to: date)!
+            let thisWeek = dayFormatter.string(from: now_)
+            let pastWeekDay = Calendar.current.dateComponents([.weekday], from: pastDay).weekday! - 1
+            let past_ = Calendar.current.date(byAdding: .day, value: -pastWeekDay, to: pastDay)!
+            let pastWeek = dayFormatter.string(from: past_)
+            weekSpan = Int(now_.timeIntervalSince(past_)/60/60/24/7)
 
              //日にちが変わっていた場合
             if now != past {
-                judge = true
+                dayCountFlag = true
             }
             else {
-                judge = false
+                dayCountFlag = false
             }
             
-            if now_w != past_w {
-                judge_w = true
+            if thisWeek != pastWeek {
+                weekCountFlag = true
                 UD.set([0.0], forKey: "NumArray_p")
             }
             else {
-                judge_w = false
+                weekCountFlag = false
             }
 
-            if now_m != past_m {
-               judge_m = true
+            if thisMonth != pastMonth {
+               monthCountFlag = true
                 UD.set([0.0], forKey: "NumArray_w_p")
             }
             else {
-               judge_m = false
+               monthCountFlag = false
             }
-            UD.set(now_day, forKey: "today_p")
+            UD.set(date, forKey: "today_p")
          }
          //初回実行のみelse
          else {
-             judge = true
-             judge_w = true
-             judge_m = true
+             dayCountFlag = true
+             weekCountFlag = true
+             monthCountFlag = true
              
-             UD.set(now_day, forKey: "today_p")
+             UD.set(date, forKey: "today_p")
              UD.set([0.0], forKey: "NumArray_p")
              UD.set([0.0], forKey: "NumArray_w_p")
              UD.set([0.0], forKey: "NumArray_m_p")
          }
 
          /* 日付が変わった場合はtrueの処理 */
-         if judge == true {
-              judge = false
+         if dayCountFlag == true {
+              dayCountFlag = false
              if UD.array(forKey: "NumArray_p") != nil {
                  valueToSave = UD.array(forKey: "NumArray_p")! as! [Double]
                  if daySpan > 1 {
@@ -178,8 +173,8 @@ class View2Controller: UIViewController, CMHeadphoneMotionManagerDelegate, Obser
              UserDefaults.standard.set(valueToSave, forKey: "NumArray_p")
          }
         
-        if judge_w == true {
-             judge_w = false
+        if weekCountFlag == true {
+             weekCountFlag = false
             if UD.array(forKey: "NumArray_w_p") != nil {
                 valueToSave = UD.array(forKey: "NumArray_w_p")! as! [Double]
                 if weekSpan > 1 {
@@ -207,8 +202,8 @@ class View2Controller: UIViewController, CMHeadphoneMotionManagerDelegate, Obser
             UserDefaults.standard.set(valueToSave, forKey: "NumArray_w_p")
         }
         
-        if judge_m == true {
-             judge_m = false
+        if monthCountFlag == true {
+             monthCountFlag = false
             if UD.array(forKey: "NumArray_m_p") != nil {
                 valueToSave = UD.array(forKey: "NumArray_m_p")! as! [Double]
             }else{
@@ -229,24 +224,23 @@ class View2Controller: UIViewController, CMHeadphoneMotionManagerDelegate, Obser
             }
             UserDefaults.standard.set(valueToSave, forKey: "NumArray_m_p")
         }
-        number = 0
         counter = 0
-        alls = 0
-        alls_m = 0
-        flag = true
-        flag_m = false
+        sumPlusAcceleration = 0
+        sumMinusAcceleration = 0
+        plusCountFlag = true
+        minusCountFlag = false
     }
     
     func ArrayDisplay(){
-        array = (UD.array(forKey: "NumArray_p") ?? [0.0]) as! [Double]
+        daySumCount = (UD.array(forKey: "NumArray_p") ?? [0.0]) as! [Double]
     }
     
     func ArrayDisplayW(){
-        arrayW = (UD.array(forKey: "NumArray_w_p") ?? [0.0]) as! [Double]
+        weekSumCount = (UD.array(forKey: "NumArray_w_p") ?? [0.0]) as! [Double]
     }
     
     func ArrayDisplayM(){
-        arrayM = (UD.array(forKey: "NumArray_m_p") ?? [0.0]) as! [Double]
+        monthSumCount = (UD.array(forKey: "NumArray_m_p") ?? [0.0]) as! [Double]
     }
 }
 

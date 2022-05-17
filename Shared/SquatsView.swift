@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SquatsView: View {
-    @ObservedObject var calc = View2Controller()
+    @ObservedObject var squatsControlller = SquatsController()
     @State var saveFlag = false
     @State var revise = false
     @State var stopFlag = false
@@ -43,7 +43,7 @@ struct SquatsView: View {
                         .padding()
                 }
                 Spacer()
-                Text("\(calc.counter)")
+                Text("\(squatsControlller.counter)")
                     .font(.largeTitle)
                     .padding()
                 Spacer()
@@ -51,7 +51,7 @@ struct SquatsView: View {
                     Spacer()
                     if saveFlag {
                         Button(action: {
-                            calc.startCalc()
+                            squatsControlller.startCalc()
                             saveFlag = false
                             stopFlag = true
                             status = 1
@@ -70,7 +70,7 @@ struct SquatsView: View {
                             .padding()
                     } else {
                         Button(action: {
-                            calc.startCalc()
+                            squatsControlller.startCalc()
                             saveFlag = false
                             stopFlag = true
                             status = 1
@@ -92,8 +92,8 @@ struct SquatsView: View {
                     if(saveFlag){
                         Button(action: {
                             Thread.sleep(forTimeInterval: 0.1)
-                            calc.saveDate()
-                            calc.counter = 0
+                            squatsControlller.saveDate()
+                            squatsControlller.counter = 0
                             saveFlag = false
                             status = 0
                         }) {
@@ -109,7 +109,7 @@ struct SquatsView: View {
                     }else{
                         Button(action: {
                             Thread.sleep(forTimeInterval: 0.1)
-                            calc.stopCalc()
+                            squatsControlller.stopCalc()
                             saveFlag = true
                             stopFlag = false
                             status = 2
@@ -132,7 +132,7 @@ struct SquatsView: View {
                     }.labelsHidden()
                         .padding()
                     Spacer()
-                    TextField("count", value: $calc.counter, formatter: NumberFormatter())
+                    TextField("count", value: $squatsControlller.counter, formatter: NumberFormatter())
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(.title2)
                         .frame(width: width * 0.3)
@@ -143,7 +143,7 @@ struct SquatsView: View {
                 if revise {
                     HStack{
                         Button(action: {
-                            calc.minus()
+                            squatsControlller.minus()
                         }, label: {
                             Text("ー")
                                 .font(.title)
@@ -151,14 +151,14 @@ struct SquatsView: View {
                         }).padding([.leading, .bottom])
                         Spacer()
                         Button(action: {
-                            calc.plus()
+                            squatsControlller.plus()
                         }, label: {
                             Text("＋")
                                 .font(.title)
                         }).padding(.bottom)
                         Spacer()
                         Button(action: {
-                            calc.reset()
+                            squatsControlller.reset()
                         }, label: {
                             Text("Reset")
                                 .font(.title)

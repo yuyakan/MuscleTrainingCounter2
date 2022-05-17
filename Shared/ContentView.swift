@@ -20,7 +20,7 @@ struct ContentView: View {
                         Text("BackExtension")
                     }
                 }.tag(0)
-                SumView()
+                SumGraphView()
                     .tabItem{
                     Group{
                         Image(systemName: "chart.bar")

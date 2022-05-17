@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Tutorial1View: View {
+struct AirpodsSettingTutorialView: View {
     var body: some View {
         ZStack{
             Color("startColor2").edgesIgnoringSafeArea(.all)

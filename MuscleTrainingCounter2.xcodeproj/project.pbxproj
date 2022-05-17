@@ -17,22 +17,22 @@
 		4B2FE30927D8E8AB007B77E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE2DF27D8E8A9007B77E6 /* ContentView.swift */; };
 		4B2FE30A27D8E8AB007B77E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */; };
 		4B2FE30B27D8E8AB007B77E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */; };
-		4B2FE31B27D8F1AC007B77E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31A27D8F1AC007B77E6 /* ViewController.swift */; };
-		4B2FE31C27D8F1AC007B77E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31A27D8F1AC007B77E6 /* ViewController.swift */; };
+		4B2FE31B27D8F1AC007B77E6 /* BackExtensionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31A27D8F1AC007B77E6 /* BackExtensionController.swift */; };
+		4B2FE31C27D8F1AC007B77E6 /* BackExtensionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31A27D8F1AC007B77E6 /* BackExtensionController.swift */; };
 		4B2FE31E27D8F1D6007B77E6 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */; };
 		4B2FE31F27D8F1D6007B77E6 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */; };
-		4B2FE32127D8F1EC007B77E6 /* Tutorial1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32027D8F1EC007B77E6 /* Tutorial1View.swift */; };
-		4B2FE32227D8F1EC007B77E6 /* Tutorial1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32027D8F1EC007B77E6 /* Tutorial1View.swift */; };
-		4B2FE32427D8F1FE007B77E6 /* Tutorial2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32327D8F1FE007B77E6 /* Tutorial2View.swift */; };
-		4B2FE32527D8F1FE007B77E6 /* Tutorial2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32327D8F1FE007B77E6 /* Tutorial2View.swift */; };
+		4B2FE32127D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */; };
+		4B2FE32227D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */; };
+		4B2FE32427D8F1FE007B77E6 /* CompleteTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32327D8F1FE007B77E6 /* CompleteTutorialView.swift */; };
+		4B2FE32527D8F1FE007B77E6 /* CompleteTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32327D8F1FE007B77E6 /* CompleteTutorialView.swift */; };
 		4B2FE32727D8F222007B77E6 /* BackExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */; };
 		4B2FE32827D8F222007B77E6 /* BackExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */; };
 		4B2FE32A27D8F235007B77E6 /* SquatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32927D8F235007B77E6 /* SquatsView.swift */; };
 		4B2FE32B27D8F235007B77E6 /* SquatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32927D8F235007B77E6 /* SquatsView.swift */; };
-		4B2FE32D27D8F254007B77E6 /* SumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32C27D8F254007B77E6 /* SumView.swift */; };
-		4B2FE32E27D8F254007B77E6 /* SumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32C27D8F254007B77E6 /* SumView.swift */; };
-		4B2FE33027D8F269007B77E6 /* View2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32F27D8F269007B77E6 /* View2Controller.swift */; };
-		4B2FE33127D8F269007B77E6 /* View2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32F27D8F269007B77E6 /* View2Controller.swift */; };
+		4B2FE32D27D8F254007B77E6 /* SumGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */; };
+		4B2FE32E27D8F254007B77E6 /* SumGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */; };
+		4B2FE33027D8F269007B77E6 /* SquatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32F27D8F269007B77E6 /* SquatsController.swift */; };
+		4B2FE33127D8F269007B77E6 /* SquatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32F27D8F269007B77E6 /* SquatsController.swift */; };
 		4B2FE33A27D8FBA2007B77E6 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 4B2FE33927D8FBA2007B77E6 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
@@ -66,14 +66,14 @@
 		4B2FE2FE27D8E8AB007B77E6 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2FE30227D8E8AB007B77E6 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		4B2FE30427D8E8AB007B77E6 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		4B2FE31A27D8F1AC007B77E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B2FE31A27D8F1AC007B77E6 /* BackExtensionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackExtensionController.swift; sourceTree = "<group>"; };
 		4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
-		4B2FE32027D8F1EC007B77E6 /* Tutorial1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial1View.swift; sourceTree = "<group>"; };
-		4B2FE32327D8F1FE007B77E6 /* Tutorial2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial2View.swift; sourceTree = "<group>"; };
+		4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirpodsSettingTutorialView.swift; sourceTree = "<group>"; };
+		4B2FE32327D8F1FE007B77E6 /* CompleteTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTutorialView.swift; sourceTree = "<group>"; };
 		4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackExtensionView.swift; sourceTree = "<group>"; };
 		4B2FE32927D8F235007B77E6 /* SquatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsView.swift; sourceTree = "<group>"; };
-		4B2FE32C27D8F254007B77E6 /* SumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumView.swift; sourceTree = "<group>"; };
-		4B2FE32F27D8F269007B77E6 /* View2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2Controller.swift; sourceTree = "<group>"; };
+		4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumGraphView.swift; sourceTree = "<group>"; };
+		4B2FE32F27D8F269007B77E6 /* SquatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,14 +125,12 @@
 			children = (
 				4B2FE2DE27D8E8A9007B77E6 /* MuscleTrainingCounter2App.swift */,
 				4B2FE2DF27D8E8A9007B77E6 /* ContentView.swift */,
-				4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */,
-				4B2FE32027D8F1EC007B77E6 /* Tutorial1View.swift */,
-				4B2FE32327D8F1FE007B77E6 /* Tutorial2View.swift */,
+				4B93F9142833B83C0076288F /* Tutorial */,
 				4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */,
 				4B2FE32927D8F235007B77E6 /* SquatsView.swift */,
-				4B2FE32C27D8F254007B77E6 /* SumView.swift */,
-				4B2FE32F27D8F269007B77E6 /* View2Controller.swift */,
-				4B2FE31A27D8F1AC007B77E6 /* ViewController.swift */,
+				4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */,
+				4B2FE32F27D8F269007B77E6 /* SquatsController.swift */,
+				4B2FE31A27D8F1AC007B77E6 /* BackExtensionController.swift */,
 				4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -173,6 +171,16 @@
 				4B2FE30427D8E8AB007B77E6 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		4B93F9142833B83C0076288F /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */,
+				4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */,
+				4B2FE32327D8F1FE007B77E6 /* CompleteTutorialView.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,13 +348,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B2FE31E27D8F1D6007B77E6 /* TutorialView.swift in Sources */,
-				4B2FE32427D8F1FE007B77E6 /* Tutorial2View.swift in Sources */,
-				4B2FE31B27D8F1AC007B77E6 /* ViewController.swift in Sources */,
+				4B2FE32427D8F1FE007B77E6 /* CompleteTutorialView.swift in Sources */,
+				4B2FE31B27D8F1AC007B77E6 /* BackExtensionController.swift in Sources */,
 				4B2FE30827D8E8AB007B77E6 /* ContentView.swift in Sources */,
 				4B2FE32727D8F222007B77E6 /* BackExtensionView.swift in Sources */,
-				4B2FE32127D8F1EC007B77E6 /* Tutorial1View.swift in Sources */,
-				4B2FE32D27D8F254007B77E6 /* SumView.swift in Sources */,
-				4B2FE33027D8F269007B77E6 /* View2Controller.swift in Sources */,
+				4B2FE32127D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */,
+				4B2FE32D27D8F254007B77E6 /* SumGraphView.swift in Sources */,
+				4B2FE33027D8F269007B77E6 /* SquatsController.swift in Sources */,
 				4B2FE30627D8E8AB007B77E6 /* MuscleTrainingCounter2App.swift in Sources */,
 				4B2FE32A27D8F235007B77E6 /* SquatsView.swift in Sources */,
 			);
@@ -357,13 +365,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B2FE31F27D8F1D6007B77E6 /* TutorialView.swift in Sources */,
-				4B2FE32527D8F1FE007B77E6 /* Tutorial2View.swift in Sources */,
-				4B2FE31C27D8F1AC007B77E6 /* ViewController.swift in Sources */,
+				4B2FE32527D8F1FE007B77E6 /* CompleteTutorialView.swift in Sources */,
+				4B2FE31C27D8F1AC007B77E6 /* BackExtensionController.swift in Sources */,
 				4B2FE30927D8E8AB007B77E6 /* ContentView.swift in Sources */,
 				4B2FE32827D8F222007B77E6 /* BackExtensionView.swift in Sources */,
-				4B2FE32227D8F1EC007B77E6 /* Tutorial1View.swift in Sources */,
-				4B2FE32E27D8F254007B77E6 /* SumView.swift in Sources */,
-				4B2FE33127D8F269007B77E6 /* View2Controller.swift in Sources */,
+				4B2FE32227D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */,
+				4B2FE32E27D8F254007B77E6 /* SumGraphView.swift in Sources */,
+				4B2FE33127D8F269007B77E6 /* SquatsController.swift in Sources */,
 				4B2FE30727D8E8AB007B77E6 /* MuscleTrainingCounter2App.swift in Sources */,
 				4B2FE32B27D8F235007B77E6 /* SquatsView.swift in Sources */,
 			);

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Tutorial2View: View {
+struct CompleteTutorialView: View {
     var body: some View {
         let bounds = UIScreen.main.bounds
         let height = bounds.height
@@ -26,11 +26,5 @@ struct Tutorial2View: View {
                     .frame(height: height * 0.1)
             }
         }
-    }
-}
-
-struct Tutorial2View_Previews: PreviewProvider {
-    static var previews: some View {
-        Tutorial2View()
     }
 }

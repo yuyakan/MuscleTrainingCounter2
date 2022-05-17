@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BackExtensionView: View {
-    @ObservedObject var calc = ViewController()
+    @ObservedObject var backExtensionController = BackExtensionController()
     @State var saveFlag = false
     @State var revise = false
     @State var stopFlag = false
@@ -43,7 +43,7 @@ struct BackExtensionView: View {
                         .padding()
                 }
                 Spacer()
-                Text("\(calc.counter)")
+                Text("\(backExtensionController.counter)")
                     .font(.largeTitle)
                     .padding()
                 Spacer()
@@ -51,7 +51,7 @@ struct BackExtensionView: View {
                     Spacer()
                     if saveFlag {
                         Button(action: {
-                            calc.startCalc()
+                            backExtensionController.startCalc()
                             saveFlag = false
                             status = 1
                             stopFlag = true
@@ -68,7 +68,7 @@ struct BackExtensionView: View {
                             .padding()
                     }else {
                         Button(action: {
-                            calc.startCalc()
+                            backExtensionController.startCalc()
                             saveFlag = false
                             status = 1
                             stopFlag = true
@@ -90,8 +90,8 @@ struct BackExtensionView: View {
                     if(saveFlag){
                         Button(action: {
                             Thread.sleep(forTimeInterval: 0.1)
-                            calc.saveDate()
-                            calc.counter = 0
+                            backExtensionController.saveDate()
+                            backExtensionController.counter = 0
                             saveFlag = false
                             status = 0
                         }) {
@@ -107,7 +107,7 @@ struct BackExtensionView: View {
                     }else{
                         Button(action: {
                             Thread.sleep(forTimeInterval: 0.1)
-                            calc.stopCalc()
+                            backExtensionController.stopCalc()
                             saveFlag = true
                             status = 2
                             stopFlag = false
@@ -130,7 +130,7 @@ struct BackExtensionView: View {
                     }.labelsHidden()
                         .padding()
                     Spacer()
-                    TextField("count", value: $calc.counter, formatter: NumberFormatter())
+                    TextField("count", value: $backExtensionController.counter, formatter: NumberFormatter())
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(.title2)
                         .frame(width: width * 0.3)
@@ -141,7 +141,7 @@ struct BackExtensionView: View {
                 if revise {
                     HStack{
                         Button(action: {
-                            calc.minus()
+                            backExtensionController.minus()
                         }, label: {
                             Text("ー")
                                 .font(.title)
@@ -149,14 +149,14 @@ struct BackExtensionView: View {
                         }).padding([.leading, .bottom])
                         Spacer()
                         Button(action: {
-                            calc.plus()
+                            backExtensionController.plus()
                         }, label: {
                             Text("＋")
                                 .font(.title)
                         }).padding(.bottom)
                         Spacer()
                         Button(action: {
-                            calc.reset()
+                            backExtensionController.reset()
                         }, label: {
                             Text("Reset")
                                 .font(.title)
