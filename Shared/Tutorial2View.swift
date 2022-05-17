@@ -23,7 +23,7 @@ struct Tutorial2View: View {
                 Image("h_")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: height * 0.2)
+                    .frame(height: height * 0.1)
             }
         }
     }

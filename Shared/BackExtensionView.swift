@@ -16,6 +16,7 @@ struct BackExtensionView: View {
     var body: some View {
         let bounds = UIScreen.main.bounds
         let height = bounds.height
+        let width = bounds.width
         ZStack{
             Image("h")
                 .resizable()
@@ -129,6 +130,13 @@ struct BackExtensionView: View {
                     }.labelsHidden()
                         .padding()
                     Spacer()
+                    TextField("count", value: $calc.counter, formatter: NumberFormatter())
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .font(.title2)
+                        .frame(width: width * 0.3)
+                        .padding(.horizontal)
+                        .opacity(revise ? 1:0)
+                        .disabled(!revise)
                 }.padding(.leading)
                 if revise {
                     HStack{

@@ -96,11 +96,16 @@ class ViewController: UIViewController, CMHeadphoneMotionManagerDelegate, Observ
         var judge = Bool()
         var judge_w = Bool()
         var judge_m = Bool()
+        
+        var daySpan = 0
+        var weekSpan = 0
 
         if UD.object(forKey: "today") != nil {
             let past_day = UD.object(forKey: "today") as! Date
             let now = formatter.string(from: now_day)
             let past = formatter.string(from: past_day)
+            let span = now_day.timeIntervalSince(past_day)
+            daySpan = Int(span/60/60/24)
             
             let now_m = formatter_m.string(from: now_day)
             let past_m = formatter_m.string(from: past_day)
@@ -113,6 +118,8 @@ class ViewController: UIViewController, CMHeadphoneMotionManagerDelegate, Observ
             let n_p = thisWeekDay_p - 1
             let past_ = Calendar.current.date(byAdding: .day, value: -n_p, to: past_day)!
             let past_w = formatter.string(from: past_)
+            let span_w = now_.timeIntervalSince(past_)
+            weekSpan = Int(span_w/60/60/24/7)
 
              //日にちが変わっていた場合
             if now != past {
@@ -125,6 +132,7 @@ class ViewController: UIViewController, CMHeadphoneMotionManagerDelegate, Observ
             
             if now_w != past_w {
                 judge_w = true
+                UD.set([0.0], forKey: "NumArray")
             }
             else {
                 judge_w = false
@@ -133,6 +141,7 @@ class ViewController: UIViewController, CMHeadphoneMotionManagerDelegate, Observ
 
             if now_m != past_m {
                 judge_m = true
+                UD.set([0.0], forKey: "NumArray_w")
             }
             else {
                 judge_m = false
@@ -157,6 +166,12 @@ class ViewController: UIViewController, CMHeadphoneMotionManagerDelegate, Observ
               judge = false
              if UD.array(forKey: "NumArray") != nil {
                  valueToSave = UD.array(forKey: "NumArray")! as! [Double]
+                 if daySpan > 1 {
+                     for i in 2...daySpan{
+                         print(i)
+                         valueToSave.append(0.0)
+                     }
+                 }
              }else{
                  UD.set(valueToSave, forKey: "NumArray")
              }
@@ -180,6 +195,12 @@ class ViewController: UIViewController, CMHeadphoneMotionManagerDelegate, Observ
              judge_w = false
             if UD.array(forKey: "NumArray_w") != nil {
                 valueToSave = UD.array(forKey: "NumArray_w")! as! [Double]
+                if weekSpan > 1 {
+                    for i in 2...weekSpan{
+                        print(i)
+                        valueToSave.append(0.0)
+                    }
+                }
                 print("a")
             }else{
                 UD.set(valueToSave, forKey: "NumArray_w")
