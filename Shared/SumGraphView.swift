@@ -9,8 +9,7 @@ import SwiftUI
 import SwiftUICharts
 
 struct SumGraphView: View {
-    @ObservedObject var backExtensionController = BackExtensionController()
-    @ObservedObject var squatsController = SquatsController()
+    @ObservedObject var sumGraphViewModel = SumGraphViewModel()
     @State var pickerSelection = 0
     @State var pickerSelection2 = 0
     var body: some View {
@@ -34,48 +33,48 @@ struct SumGraphView: View {
             }
             if pickerSelection == 0{
                 if pickerSelection2 == 0{
-                    LineView(data: backExtensionController.daySumCount, title: "Sit-ups", legend: "Times / 1day")
+                    LineView(data: sumGraphViewModel.backExtensionDaySumCount, title: "Sit-ups", legend: "Times / 1day")
                         .padding()
                         .padding(.vertical, height * 0.18)
                         .onAppear(perform: {
-                            backExtensionController.displayDay()
+                            sumGraphViewModel.displayBackExtensionDay()
                         })
                 }else if pickerSelection2 == 1 {
-                    LineView(data: backExtensionController.weekSumCount, title: "Sit-ups", legend: "Times / 1week")
+                    LineView(data: sumGraphViewModel.backExtensionWeekSumCount, title: "Sit-ups", legend: "Times / 1week")
                         .padding()
                         .padding(.vertical, height * 0.18)
                         .onAppear(perform: {
-                            backExtensionController.displayWeek()
+                            sumGraphViewModel.displayBackExtensionWeek()
                         })
                 }else {
-                    LineView(data: backExtensionController.monthSumCount, title: "Sit-ups", legend: "Times / 1month")
+                    LineView(data: sumGraphViewModel.backExtensionMonthSumCount, title: "Sit-ups", legend: "Times / 1month")
                         .padding()
                         .padding(.vertical, height * 0.18)
                         .onAppear(perform: {
-                            backExtensionController.displayMonth()
+                            sumGraphViewModel.displayBackExtensionMonth()
                         })
                 }
             }else {
                 if pickerSelection2 == 0{
-                    LineView(data: squatsController.daySumCount, title: "Push-ups", legend: "Times / 1day")
+                    LineView(data: sumGraphViewModel.squatsDaySumCount, title: "Push-ups", legend: "Times / 1day")
                         .padding()
                         .padding(.vertical, height * 0.18)
                         .onAppear(perform: {
-                            squatsController.ArrayDisplay()
+                            sumGraphViewModel.displaySquatsDay()
                         })
                 }else if pickerSelection2 == 1 {
-                    LineView(data: squatsController.weekSumCount, title: "Push-ups", legend: "Times / 1week")
+                    LineView(data: sumGraphViewModel.squatsWeekSumCount, title: "Push-ups", legend: "Times / 1week")
                         .padding()
                         .padding(.vertical, height * 0.18)
                         .onAppear(perform: {
-                            squatsController.ArrayDisplayW()
+                            sumGraphViewModel.displaySquatsWeek()
                         })
                 }else {
-                    LineView(data: squatsController.monthSumCount, title: "Push-ups", legend: "Times / 1month")
+                    LineView(data: sumGraphViewModel.squatsMonthSumCount, title: "Push-ups", legend: "Times / 1month")
                         .padding()
                         .padding(.vertical, height * 0.18)
                         .onAppear(perform: {
-                            squatsController.ArrayDisplayM()
+                            sumGraphViewModel.displaySquatsMonth()
                         })
                 }
             }
@@ -83,29 +82,29 @@ struct SumGraphView: View {
                 Spacer()
                 if pickerSelection == 0{
                     if pickerSelection2 == 0{
-                        Text("Total　：　\(Int(backExtensionController.daySumCount.reduce(0, +)))")
+                        Text("Total　：　\(Int(sumGraphViewModel.backExtensionDaySumCount.reduce(0, +)))")
                             .font(.largeTitle)
                             .padding(.bottom, height * 0.05)
                     }else if pickerSelection2 == 1{
-                        Text("Total　：　\(Int(backExtensionController.weekSumCount.reduce(0, +)))")
+                        Text("Total　：　\(Int(sumGraphViewModel.backExtensionWeekSumCount.reduce(0, +)))")
                             .font(.largeTitle)
                             .padding(.bottom, height * 0.05)
                     }else{
-                        Text("Total　：　\(Int(backExtensionController.monthSumCount.reduce(0, +)))")
+                        Text("Total　：　\(Int(sumGraphViewModel.backExtensionMonthSumCount.reduce(0, +)))")
                             .font(.largeTitle)
                             .padding(.bottom, height * 0.05)
                     }
                 }else{
                     if pickerSelection2 == 0{
-                        Text("Total　：　\(Int(squatsController.daySumCount.reduce(0, +)))")
+                        Text("Total　：　\(Int(sumGraphViewModel.squatsDaySumCount.reduce(0, +)))")
                             .font(.largeTitle)
                             .padding(.bottom, height * 0.05)
                     }else if pickerSelection2 == 1{
-                        Text("Total　：　\(Int(squatsController.weekSumCount.reduce(0, +)))")
+                        Text("Total　：　\(Int(sumGraphViewModel.squatsWeekSumCount.reduce(0, +)))")
                             .font(.largeTitle)
                             .padding(.bottom, height * 0.05)
                     }else{
-                        Text("Total　：　\(Int(squatsController.monthSumCount.reduce(0, +)))")
+                        Text("Total　：　\(Int(sumGraphViewModel.squatsMonthSumCount.reduce(0, +)))")
                             .font(.largeTitle)
                             .padding(.bottom, height * 0.05)
                     }

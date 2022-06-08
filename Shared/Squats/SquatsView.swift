@@ -1,5 +1,5 @@
 //
-//  SitUpsView.swift
+//  PushUpsView.swift
 //  MuscleTrainingCounter2
 //
 //  Created by 上別縄祐也 on 2022/03/09.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct BackExtensionView: View {
-    @ObservedObject var backExtensionController = BackExtensionController()
+struct SquatsView: View {
+    @ObservedObject var squatsViewController = SquatsViewController()
     @State var saveFlag = false
     @State var revise = false
     @State var stopFlag = false
@@ -18,14 +18,14 @@ struct BackExtensionView: View {
         let height = bounds.height
         let width = bounds.width
         ZStack{
-            Image("h")
+            Image("s")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .opacity(0.5)
+                .opacity(0.3)
             VStack{
                 Spacer()
                 if status == 0 {
-                    Text("BackExtension")
+                    Text("Squats")
                         .font(.largeTitle)
                         .padding()
                 }else if status == 1{
@@ -43,7 +43,7 @@ struct BackExtensionView: View {
                         .padding()
                 }
                 Spacer()
-                Text("\(backExtensionController.counter)")
+                Text("\(squatsViewController.counter)")
                     .font(.largeTitle)
                     .padding()
                 Spacer()
@@ -51,10 +51,10 @@ struct BackExtensionView: View {
                     Spacer()
                     if saveFlag {
                         Button(action: {
-                            backExtensionController.startCalc()
+                            squatsViewController.startCalc()
                             saveFlag = false
-                            status = 1
                             stopFlag = true
+                            status = 1
                         }, label: {
                             Text("▶︎")
                                 .font(.largeTitle)
@@ -65,13 +65,15 @@ struct BackExtensionView: View {
                                 .shadow(color: .gray, radius: 4, x: 0, y: 0)
                                 .padding(.trailing)
                         })
+                            .disabled(stopFlag)
+                            .opacity(stopFlag ? 0.3:1)
                             .padding()
-                    }else {
+                    } else {
                         Button(action: {
-                            backExtensionController.startCalc()
+                            squatsViewController.startCalc()
                             saveFlag = false
-                            status = 1
                             stopFlag = true
+                            status = 1
                         }, label: {
                             Text("Start")
                                 .font(.title)
@@ -90,8 +92,7 @@ struct BackExtensionView: View {
                     if(saveFlag){
                         Button(action: {
                             Thread.sleep(forTimeInterval: 0.1)
-                            backExtensionController.saveDate()
-                            backExtensionController.counter = 0
+                            squatsViewController.saveDate()
                             saveFlag = false
                             status = 0
                         }) {
@@ -107,10 +108,10 @@ struct BackExtensionView: View {
                     }else{
                         Button(action: {
                             Thread.sleep(forTimeInterval: 0.1)
-                            backExtensionController.stopCalc()
+                            squatsViewController.stopCalc()
                             saveFlag = true
-                            status = 2
                             stopFlag = false
+                            status = 2
                         }, label: {
                             Text("Stop")
                                 .font(.title)
@@ -130,7 +131,7 @@ struct BackExtensionView: View {
                     }.labelsHidden()
                         .padding()
                     Spacer()
-                    TextField("count", value: $backExtensionController.counter, formatter: NumberFormatter())
+                    TextField("count", value: $squatsViewController.counter, formatter: NumberFormatter())
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(.title2)
                         .frame(width: width * 0.3)
@@ -141,7 +142,7 @@ struct BackExtensionView: View {
                 if revise {
                     HStack{
                         Button(action: {
-                            backExtensionController.minus()
+                            squatsViewController.minus()
                         }, label: {
                             Text("ー")
                                 .font(.title)
@@ -149,14 +150,14 @@ struct BackExtensionView: View {
                         }).padding([.leading, .bottom])
                         Spacer()
                         Button(action: {
-                            backExtensionController.plus()
+                            squatsViewController.plus()
                         }, label: {
                             Text("＋")
                                 .font(.title)
                         }).padding(.bottom)
                         Spacer()
                         Button(action: {
-                            backExtensionController.reset()
+                            squatsViewController.reset()
                         }, label: {
                             Text("Reset")
                                 .font(.title)
@@ -169,28 +170,6 @@ struct BackExtensionView: View {
                 }
             }
         }
-    }
-}
-
-struct BackExtensionView_Previews: PreviewProvider {
-    static var previews: some View {
-        BackExtensionView()
-    }
-}
-
-struct DotView: View {
-    @State var delay: Double = 0
-    @State var scale: CGFloat = 0.5
-    var body: some View {
-        Circle()
-            .frame(width: 10, height: 10)
-            .scaleEffect(scale)
-            .animation(Animation.easeInOut(duration: 0.6).repeatForever().delay(delay), value: scale)
-            .onAppear {
-                withAnimation {
-                    self.scale = 1
-                }
-            }
     }
 }
 

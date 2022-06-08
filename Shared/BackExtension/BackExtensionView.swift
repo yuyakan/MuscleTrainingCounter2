@@ -1,5 +1,5 @@
 //
-//  PushUpsView.swift
+//  SitUpsView.swift
 //  MuscleTrainingCounter2
 //
 //  Created by 上別縄祐也 on 2022/03/09.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SquatsView: View {
-    @ObservedObject var squatsControlller = SquatsController()
+struct BackExtensionView: View {
+    @ObservedObject var backExtensionViewController = BackExtensionViewController()
     @State var saveFlag = false
     @State var revise = false
     @State var stopFlag = false
@@ -18,14 +18,14 @@ struct SquatsView: View {
         let height = bounds.height
         let width = bounds.width
         ZStack{
-            Image("s")
+            Image("h")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .opacity(0.3)
+                .opacity(0.5)
             VStack{
                 Spacer()
                 if status == 0 {
-                    Text("Squats")
+                    Text("BackExtension")
                         .font(.largeTitle)
                         .padding()
                 }else if status == 1{
@@ -43,7 +43,7 @@ struct SquatsView: View {
                         .padding()
                 }
                 Spacer()
-                Text("\(squatsControlller.counter)")
+                Text("\(backExtensionViewController.counter)")
                     .font(.largeTitle)
                     .padding()
                 Spacer()
@@ -51,10 +51,10 @@ struct SquatsView: View {
                     Spacer()
                     if saveFlag {
                         Button(action: {
-                            squatsControlller.startCalc()
+                            backExtensionViewController.startCalc()
                             saveFlag = false
-                            stopFlag = true
                             status = 1
+                            stopFlag = true
                         }, label: {
                             Text("▶︎")
                                 .font(.largeTitle)
@@ -65,15 +65,13 @@ struct SquatsView: View {
                                 .shadow(color: .gray, radius: 4, x: 0, y: 0)
                                 .padding(.trailing)
                         })
-                            .disabled(stopFlag)
-                            .opacity(stopFlag ? 0.3:1)
                             .padding()
-                    } else {
+                    }else {
                         Button(action: {
-                            squatsControlller.startCalc()
+                            backExtensionViewController.startCalc()
                             saveFlag = false
-                            stopFlag = true
                             status = 1
+                            stopFlag = true
                         }, label: {
                             Text("Start")
                                 .font(.title)
@@ -92,8 +90,7 @@ struct SquatsView: View {
                     if(saveFlag){
                         Button(action: {
                             Thread.sleep(forTimeInterval: 0.1)
-                            squatsControlller.saveDate()
-                            squatsControlller.counter = 0
+                            backExtensionViewController.saveDate()
                             saveFlag = false
                             status = 0
                         }) {
@@ -109,10 +106,10 @@ struct SquatsView: View {
                     }else{
                         Button(action: {
                             Thread.sleep(forTimeInterval: 0.1)
-                            squatsControlller.stopCalc()
+                            backExtensionViewController.stopCalc()
                             saveFlag = true
-                            stopFlag = false
                             status = 2
+                            stopFlag = false
                         }, label: {
                             Text("Stop")
                                 .font(.title)
@@ -132,7 +129,7 @@ struct SquatsView: View {
                     }.labelsHidden()
                         .padding()
                     Spacer()
-                    TextField("count", value: $squatsControlller.counter, formatter: NumberFormatter())
+                    TextField("count", value: $backExtensionViewController.counter, formatter: NumberFormatter())
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(.title2)
                         .frame(width: width * 0.3)
@@ -143,7 +140,7 @@ struct SquatsView: View {
                 if revise {
                     HStack{
                         Button(action: {
-                            squatsControlller.minus()
+                            backExtensionViewController.minus()
                         }, label: {
                             Text("ー")
                                 .font(.title)
@@ -151,14 +148,14 @@ struct SquatsView: View {
                         }).padding([.leading, .bottom])
                         Spacer()
                         Button(action: {
-                            squatsControlller.plus()
+                            backExtensionViewController.plus()
                         }, label: {
                             Text("＋")
                                 .font(.title)
                         }).padding(.bottom)
                         Spacer()
                         Button(action: {
-                            squatsControlller.reset()
+                            backExtensionViewController.reset()
                         }, label: {
                             Text("Reset")
                                 .font(.title)
@@ -173,4 +170,5 @@ struct SquatsView: View {
         }
     }
 }
+
 

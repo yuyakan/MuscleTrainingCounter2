@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B07076C285045C7002C9431 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07076B285045C7002C9431 /* DotView.swift */; };
+		4B07076D285045C7002C9431 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07076B285045C7002C9431 /* DotView.swift */; };
+		4B07077128504B35002C9431 /* SquatsCounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077028504B35002C9431 /* SquatsCounterModel.swift */; };
+		4B07077228504B35002C9431 /* SquatsCounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077028504B35002C9431 /* SquatsCounterModel.swift */; };
+		4B07077428505069002C9431 /* SumGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077328505069002C9431 /* SumGraphViewModel.swift */; };
+		4B07077528505069002C9431 /* SumGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077328505069002C9431 /* SumGraphViewModel.swift */; };
+		4B070777285054FC002C9431 /* BackExtensionCounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B070776285054FC002C9431 /* BackExtensionCounterModel.swift */; };
+		4B070778285054FC002C9431 /* BackExtensionCounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B070776285054FC002C9431 /* BackExtensionCounterModel.swift */; };
+		4B07077A28505A0E002C9431 /* SetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077928505A0E002C9431 /* SetUp.swift */; };
+		4B07077B28505A0E002C9431 /* SetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077928505A0E002C9431 /* SetUp.swift */; };
 		4B2FE2F727D8E8AB007B77E6 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE2F627D8E8AB007B77E6 /* Tests_iOS.swift */; };
 		4B2FE2F927D8E8AB007B77E6 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE2F827D8E8AB007B77E6 /* Tests_iOSLaunchTests.swift */; };
 		4B2FE30327D8E8AB007B77E6 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE30227D8E8AB007B77E6 /* Tests_macOS.swift */; };
@@ -17,8 +27,8 @@
 		4B2FE30927D8E8AB007B77E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE2DF27D8E8A9007B77E6 /* ContentView.swift */; };
 		4B2FE30A27D8E8AB007B77E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */; };
 		4B2FE30B27D8E8AB007B77E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */; };
-		4B2FE31B27D8F1AC007B77E6 /* BackExtensionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31A27D8F1AC007B77E6 /* BackExtensionController.swift */; };
-		4B2FE31C27D8F1AC007B77E6 /* BackExtensionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31A27D8F1AC007B77E6 /* BackExtensionController.swift */; };
+		4B2FE31B27D8F1AC007B77E6 /* BackExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31A27D8F1AC007B77E6 /* BackExtensionViewController.swift */; };
+		4B2FE31C27D8F1AC007B77E6 /* BackExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31A27D8F1AC007B77E6 /* BackExtensionViewController.swift */; };
 		4B2FE31E27D8F1D6007B77E6 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */; };
 		4B2FE31F27D8F1D6007B77E6 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */; };
 		4B2FE32127D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */; };
@@ -31,8 +41,8 @@
 		4B2FE32B27D8F235007B77E6 /* SquatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32927D8F235007B77E6 /* SquatsView.swift */; };
 		4B2FE32D27D8F254007B77E6 /* SumGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */; };
 		4B2FE32E27D8F254007B77E6 /* SumGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */; };
-		4B2FE33027D8F269007B77E6 /* SquatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32F27D8F269007B77E6 /* SquatsController.swift */; };
-		4B2FE33127D8F269007B77E6 /* SquatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32F27D8F269007B77E6 /* SquatsController.swift */; };
+		4B2FE33027D8F269007B77E6 /* SquatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32F27D8F269007B77E6 /* SquatsViewController.swift */; };
+		4B2FE33127D8F269007B77E6 /* SquatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32F27D8F269007B77E6 /* SquatsViewController.swift */; };
 		4B2FE33A27D8FBA2007B77E6 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 4B2FE33927D8FBA2007B77E6 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +64,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B07076B285045C7002C9431 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
+		4B07077028504B35002C9431 /* SquatsCounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsCounterModel.swift; sourceTree = "<group>"; };
+		4B07077328505069002C9431 /* SumGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumGraphViewModel.swift; sourceTree = "<group>"; };
+		4B070776285054FC002C9431 /* BackExtensionCounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackExtensionCounterModel.swift; sourceTree = "<group>"; };
+		4B07077928505A0E002C9431 /* SetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUp.swift; sourceTree = "<group>"; };
 		4B2FE2DE27D8E8A9007B77E6 /* MuscleTrainingCounter2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleTrainingCounter2App.swift; sourceTree = "<group>"; };
 		4B2FE2DF27D8E8A9007B77E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,14 +81,14 @@
 		4B2FE2FE27D8E8AB007B77E6 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2FE30227D8E8AB007B77E6 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		4B2FE30427D8E8AB007B77E6 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		4B2FE31A27D8F1AC007B77E6 /* BackExtensionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackExtensionController.swift; sourceTree = "<group>"; };
+		4B2FE31A27D8F1AC007B77E6 /* BackExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackExtensionViewController.swift; sourceTree = "<group>"; };
 		4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirpodsSettingTutorialView.swift; sourceTree = "<group>"; };
 		4B2FE32327D8F1FE007B77E6 /* CompleteTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTutorialView.swift; sourceTree = "<group>"; };
 		4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackExtensionView.swift; sourceTree = "<group>"; };
 		4B2FE32927D8F235007B77E6 /* SquatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsView.swift; sourceTree = "<group>"; };
 		4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumGraphView.swift; sourceTree = "<group>"; };
-		4B2FE32F27D8F269007B77E6 /* SquatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsController.swift; sourceTree = "<group>"; };
+		4B2FE32F27D8F269007B77E6 /* SquatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +124,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B07076E28504644002C9431 /* Squats */ = {
+			isa = PBXGroup;
+			children = (
+				4B2FE32927D8F235007B77E6 /* SquatsView.swift */,
+				4B2FE32F27D8F269007B77E6 /* SquatsViewController.swift */,
+			);
+			path = Squats;
+			sourceTree = "<group>";
+		};
+		4B07076F2850465F002C9431 /* BackExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4B2FE31A27D8F1AC007B77E6 /* BackExtensionViewController.swift */,
+				4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */,
+			);
+			path = BackExtension;
+			sourceTree = "<group>";
+		};
 		4B2FE2D827D8E8A9007B77E6 = {
 			isa = PBXGroup;
 			children = (
@@ -124,13 +157,16 @@
 			isa = PBXGroup;
 			children = (
 				4B2FE2DE27D8E8A9007B77E6 /* MuscleTrainingCounter2App.swift */,
+				4B07077928505A0E002C9431 /* SetUp.swift */,
 				4B2FE2DF27D8E8A9007B77E6 /* ContentView.swift */,
+				4B07076B285045C7002C9431 /* DotView.swift */,
+				4B07077028504B35002C9431 /* SquatsCounterModel.swift */,
+				4B070776285054FC002C9431 /* BackExtensionCounterModel.swift */,
 				4B93F9142833B83C0076288F /* Tutorial */,
-				4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */,
-				4B2FE32927D8F235007B77E6 /* SquatsView.swift */,
+				4B07076F2850465F002C9431 /* BackExtension */,
+				4B07076E28504644002C9431 /* Squats */,
 				4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */,
-				4B2FE32F27D8F269007B77E6 /* SquatsController.swift */,
-				4B2FE31A27D8F1AC007B77E6 /* BackExtensionController.swift */,
+				4B07077328505069002C9431 /* SumGraphViewModel.swift */,
 				4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -349,14 +385,19 @@
 			files = (
 				4B2FE31E27D8F1D6007B77E6 /* TutorialView.swift in Sources */,
 				4B2FE32427D8F1FE007B77E6 /* CompleteTutorialView.swift in Sources */,
-				4B2FE31B27D8F1AC007B77E6 /* BackExtensionController.swift in Sources */,
+				4B07077A28505A0E002C9431 /* SetUp.swift in Sources */,
+				4B2FE31B27D8F1AC007B77E6 /* BackExtensionViewController.swift in Sources */,
 				4B2FE30827D8E8AB007B77E6 /* ContentView.swift in Sources */,
 				4B2FE32727D8F222007B77E6 /* BackExtensionView.swift in Sources */,
+				4B07076C285045C7002C9431 /* DotView.swift in Sources */,
 				4B2FE32127D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */,
 				4B2FE32D27D8F254007B77E6 /* SumGraphView.swift in Sources */,
-				4B2FE33027D8F269007B77E6 /* SquatsController.swift in Sources */,
+				4B2FE33027D8F269007B77E6 /* SquatsViewController.swift in Sources */,
+				4B07077128504B35002C9431 /* SquatsCounterModel.swift in Sources */,
 				4B2FE30627D8E8AB007B77E6 /* MuscleTrainingCounter2App.swift in Sources */,
+				4B07077428505069002C9431 /* SumGraphViewModel.swift in Sources */,
 				4B2FE32A27D8F235007B77E6 /* SquatsView.swift in Sources */,
+				4B070777285054FC002C9431 /* BackExtensionCounterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,14 +407,19 @@
 			files = (
 				4B2FE31F27D8F1D6007B77E6 /* TutorialView.swift in Sources */,
 				4B2FE32527D8F1FE007B77E6 /* CompleteTutorialView.swift in Sources */,
-				4B2FE31C27D8F1AC007B77E6 /* BackExtensionController.swift in Sources */,
+				4B07077B28505A0E002C9431 /* SetUp.swift in Sources */,
+				4B2FE31C27D8F1AC007B77E6 /* BackExtensionViewController.swift in Sources */,
 				4B2FE30927D8E8AB007B77E6 /* ContentView.swift in Sources */,
 				4B2FE32827D8F222007B77E6 /* BackExtensionView.swift in Sources */,
+				4B07076D285045C7002C9431 /* DotView.swift in Sources */,
 				4B2FE32227D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */,
 				4B2FE32E27D8F254007B77E6 /* SumGraphView.swift in Sources */,
-				4B2FE33127D8F269007B77E6 /* SquatsController.swift in Sources */,
+				4B2FE33127D8F269007B77E6 /* SquatsViewController.swift in Sources */,
+				4B07077228504B35002C9431 /* SquatsCounterModel.swift in Sources */,
 				4B2FE30727D8E8AB007B77E6 /* MuscleTrainingCounter2App.swift in Sources */,
+				4B07077528505069002C9431 /* SumGraphViewModel.swift in Sources */,
 				4B2FE32B27D8F235007B77E6 /* SquatsView.swift in Sources */,
+				4B070778285054FC002C9431 /* BackExtensionCounterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
