@@ -41,6 +41,7 @@ class SquatsViewController: UIViewController, CMHeadphoneMotionManagerDelegate, 
     
     func stopCalc(){
         print("stop")
+        squatsCounterModel.stopCaluculation()
         airpods.stopDeviceMotionUpdates()
     }
     
@@ -58,18 +59,17 @@ class SquatsViewController: UIViewController, CMHeadphoneMotionManagerDelegate, 
     
     func saveDate(){
         let UD = UserDefaults.standard
-        let dayFormatter = DateFormatter()
-        let monthFormatter = DateFormatter()
         self.counter = "0"
-        
-        dayFormatter.dateFormat = "yyyy/MM/dd"
-        monthFormatter.dateFormat = "yyyy/MM"
         
         let date = Date()
         
         var dayCountFlag = Bool()
         var weekCountFlag = Bool()
         var monthCountFlag = Bool()
+        
+        var elapsedDays = 0
+        var elapsedWeeks = 0
+        var elapsedMonthes = 0
 
         if UD.object(forKey: "today_p") == nil {
             dayCountFlag = true
@@ -80,34 +80,32 @@ class SquatsViewController: UIViewController, CMHeadphoneMotionManagerDelegate, 
          }
          else {
              
-             let pastDate = UD.object(forKey: "today_p") as! Date
              
-             let now = dayFormatter.string(from: date)
-             let past = dayFormatter.string(from: pastDate)
-
-             let thisWeekStart = squatsCounterModel.getWeekStart(date: date)
-             let thisWeek = dayFormatter.string(from: thisWeekStart)
+             let now = Date()
+             let past = UD.object(forKey: "today_p") as! Date
              
-             let pastWeekStart = squatsCounterModel.getWeekStart(date: pastDate)
-             let pastWeek = dayFormatter.string(from: pastWeekStart)
+             let thisWeek = squatsCounterModel.getWeekStart(date: date)
+             let pastWeek = squatsCounterModel.getWeekStart(date: past)
              
+             let thisMonth = Calendar.current.component(.month, from: now)
+             let pastMonth = Calendar.current.component(.month, from: past)
              
-             let thisMonth = monthFormatter.string(from: date)
-             let pastMonth = monthFormatter.string(from: pastDate)
+             let thisYear = Calendar.current.component(.year, from: now)
+             let pastYear = Calendar.current.component(.year, from: past)
              
-             dayCountFlag = squatsCounterModel.comparePastNow(now: now, past: past)
-             weekCountFlag = squatsCounterModel.comparePastNow(now: thisWeek, past: pastWeek)
-             monthCountFlag = squatsCounterModel.comparePastNow(now: thisMonth, past: pastMonth)
+             dayCountFlag = squatsCounterModel.comparePastNow(now: now, past: past, elapsedNumber: &elapsedDays)
+             weekCountFlag = squatsCounterModel.comparePastNow(now: thisWeek, past: pastWeek, elapsedNumber: &elapsedWeeks)
+             monthCountFlag = squatsCounterModel.comparePastNowMonth(thisMonth: thisMonth, pastMonth: pastMonth, thisYear: thisYear, pastYear: pastYear, elapsedNumber: &elapsedMonthes)
      
              UD.set(date, forKey: "today_p")
          }
         
 
-        squatsCounterModel.graphCountSave(countFlag: &dayCountFlag, numArray: "NumArray_p")
+        squatsCounterModel.graphCountSave(countFlag: &dayCountFlag, numArray: "NumArray_p", elapsedNumber: elapsedDays)
         
-        squatsCounterModel.graphCountSave(countFlag: &weekCountFlag, numArray: "NumArray_w_p")
+        squatsCounterModel.graphCountSave(countFlag: &weekCountFlag, numArray: "NumArray_w_p", elapsedNumber: elapsedWeeks)
         
-        squatsCounterModel.graphCountSave(countFlag: &monthCountFlag, numArray: "NumArray_m_p")
+        squatsCounterModel.graphCountSave(countFlag: &monthCountFlag, numArray: "NumArray_m_p", elapsedNumber: elapsedMonthes)
         
         squatsCounterModel.counter = 0
     }

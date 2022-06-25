@@ -10,11 +10,12 @@ import CoreMotion
 final class BackExtensionCounterModel {
     @Published var counter = 0
     
+    var sumPlusRotationRate : Double = 0.0
+    var sumMinusRotationRate : Double = 0.0
+    var plusCountFlag = false
+    var minusCountFlag = true
+    
     func countCalculation(data: CMDeviceMotion) {
-        var sumPlusRotationRate : Double = 0.0
-        var sumMinusRotationRate : Double = 0.0
-        var plusCountFlag = false
-        var minusCountFlag = true
         let x = data.rotationRate.x
         if (x > 0.0 && plusCountFlag == true){
             sumPlusRotationRate += x
@@ -37,11 +38,44 @@ final class BackExtensionCounterModel {
         }
     }
     
+    func stopCaluculation() {
+        sumPlusRotationRate = 0
+        sumMinusRotationRate = 0
+        plusCountFlag = false
+        minusCountFlag = true
+    }
     
-    func comparePastNow(now: String, past: String) -> Bool {
+    
+    
+    func comparePastNow(now: Date, past: Date, elapsedNumber: inout Int) -> Bool {
         var countFlag = false
-        if now != past {
+        let calendar = Calendar(identifier: .gregorian)
+        
+        let year = calendar.component(.year, from: now)
+        let month = calendar.component(.month, from: now)
+        let day = calendar.component(.day, from: now)
+        
+        let pastYear = calendar.component(.year, from: past)
+        let pastMonth = calendar.component(.month, from: past)
+        let pastDay = calendar.component(.day, from: past)
+        
+        elapsedNumber = (year * 365 + month * 30 + day) - (pastYear * 365 + pastMonth * 30 + pastDay)
+        
+        if elapsedNumber > 0 {
             countFlag = true
+        }
+        else {
+            countFlag = false
+        }
+        return countFlag
+    }
+    
+    func comparePastNowMonth(thisMonth: Int, pastMonth: Int, thisYear: Int, pastYear: Int, elapsedNumber: inout Int) -> Bool {
+        var countFlag = false
+        
+        if thisMonth != pastMonth || thisYear != pastYear {
+            countFlag = true
+            elapsedNumber = (thisMonth - pastYear) + (thisYear - thisMonth) * 12
         }
         else {
             countFlag = false
@@ -56,11 +90,26 @@ final class BackExtensionCounterModel {
         return now_
     }
     
-    func graphCountSave(countFlag: inout Bool, numArray: String) {
+    func graphCountSave(countFlag: inout Bool, numArray: String, elapsedNumber: Int) {
         var valueToSave: [Double] = []
         valueToSave = UserDefaults.standard.array(forKey: "\(numArray)")! as! [Double]
         if countFlag == true {
             countFlag = false
+            
+            if elapsedNumber > 8 {
+                for i in 0 ..< 7 {
+                    print(i)
+                    valueToSave.remove(at: 1)
+                    valueToSave.append(0)
+                }
+            } else {
+                for i in 1 ..< elapsedNumber {
+                    print(i)
+                    valueToSave.remove(at: 1)
+                    valueToSave.append(0)
+                }
+            }
+            
             valueToSave.remove(at: 1)
             valueToSave.append(Double(counter))
         }

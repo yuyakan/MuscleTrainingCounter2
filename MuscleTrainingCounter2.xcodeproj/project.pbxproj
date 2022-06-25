@@ -159,10 +159,9 @@
 				4B2FE2DE27D8E8A9007B77E6 /* MuscleTrainingCounter2App.swift */,
 				4B07077928505A0E002C9431 /* SetUp.swift */,
 				4B2FE2DF27D8E8A9007B77E6 /* ContentView.swift */,
-				4B07076B285045C7002C9431 /* DotView.swift */,
-				4B07077028504B35002C9431 /* SquatsCounterModel.swift */,
-				4B070776285054FC002C9431 /* BackExtensionCounterModel.swift */,
 				4B93F9142833B83C0076288F /* Tutorial */,
+				4B070776285054FC002C9431 /* BackExtensionCounterModel.swift */,
+				4B07077028504B35002C9431 /* SquatsCounterModel.swift */,
 				4B07076F2850465F002C9431 /* BackExtension */,
 				4B07076E28504644002C9431 /* Squats */,
 				4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */,
@@ -212,6 +211,7 @@
 		4B93F9142833B83C0076288F /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				4B07076B285045C7002C9431 /* DotView.swift */,
 				4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */,
 				4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */,
 				4B2FE32327D8F1FE007B77E6 /* CompleteTutorialView.swift */,
@@ -579,6 +579,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMotionUsageDescription = "Get acceleration data by Airpods";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = AppTrackingTransparencyRequest;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -610,6 +611,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMotionUsageDescription = "Get acceleration data by Airpods";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = AppTrackingTransparencyRequest;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

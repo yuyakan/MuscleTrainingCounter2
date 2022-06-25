@@ -57,6 +57,7 @@ class BackExtensionViewController: UIViewController, CMHeadphoneMotionManagerDel
     func stopCalc(){
         print("stop")
         airpods.stopDeviceMotionUpdates()
+        backExtensionCounterModel.stopCaluculation()
     }
     
     func plus(){
@@ -73,12 +74,7 @@ class BackExtensionViewController: UIViewController, CMHeadphoneMotionManagerDel
     
     let UD = UserDefaults.standard
     func saveDate(){
-        let dayFormatter = DateFormatter()
-        let monthFormatter = DateFormatter()
         self.counter = "0"
-        
-        dayFormatter.dateFormat = "yyyy/MM/dd"
-        monthFormatter.dateFormat = "yyyy/MM"
         
         let date = Date()
         
@@ -86,7 +82,10 @@ class BackExtensionViewController: UIViewController, CMHeadphoneMotionManagerDel
         var weekCountFlag = Bool()
         var monthCountFlag = Bool()
         
-
+        var elapsedDays = 0
+        var elapsedWeeks = 0
+        var elapsedMonthes = 0
+        
         if UD.object(forKey: "today") == nil {
             dayCountFlag = true
             weekCountFlag = true
@@ -96,32 +95,30 @@ class BackExtensionViewController: UIViewController, CMHeadphoneMotionManagerDel
          }
          else {
              
-             let pastDate = UD.object(forKey: "today") as! Date
+             let now = Date()
+             let past = UD.object(forKey: "today") as! Date
              
-             let now = dayFormatter.string(from: date)
-             let past = dayFormatter.string(from: pastDate)
-
-             let thisWeekStart = backExtensionCounterModel.getWeekStart(date: date)
-             let thisWeek = dayFormatter.string(from: thisWeekStart)
+             let thisWeek = backExtensionCounterModel.getWeekStart(date: date)
+             let pastWeek = backExtensionCounterModel.getWeekStart(date: past)
              
-             let pastWeekStart = backExtensionCounterModel.getWeekStart(date: pastDate)
-             let pastWeek = dayFormatter.string(from: pastWeekStart)
+             let thisMonth = Calendar.current.component(.month, from: now)
+             let pastMonth = Calendar.current.component(.month, from: past)
              
-             let thisMonth = monthFormatter.string(from: date)
-             let pastMonth = monthFormatter.string(from: pastDate)
+             let thisYear = Calendar.current.component(.year, from: now)
+             let pastYear = Calendar.current.component(.year, from: past)
              
-             dayCountFlag = backExtensionCounterModel.comparePastNow(now: now, past: past)
-             weekCountFlag = backExtensionCounterModel.comparePastNow(now: thisWeek, past: pastWeek)
-             monthCountFlag = backExtensionCounterModel.comparePastNow(now: thisMonth, past: pastMonth)
+             dayCountFlag = backExtensionCounterModel.comparePastNow(now: now, past: past, elapsedNumber: &elapsedDays)
+             weekCountFlag = backExtensionCounterModel.comparePastNow(now: thisWeek, past: pastWeek, elapsedNumber: &elapsedWeeks)
+             monthCountFlag = backExtensionCounterModel.comparePastNowMonth(thisMonth: thisMonth, pastMonth: pastMonth, thisYear: thisYear, pastYear: pastYear, elapsedNumber: &elapsedMonthes)
      
              UD.set(date, forKey: "today")
          }
         
-        backExtensionCounterModel.graphCountSave(countFlag: &dayCountFlag, numArray: "NumArray")
+        backExtensionCounterModel.graphCountSave(countFlag: &dayCountFlag, numArray: "NumArray", elapsedNumber: elapsedDays)
         
-        backExtensionCounterModel.graphCountSave(countFlag: &weekCountFlag, numArray: "NumArray_w")
+        backExtensionCounterModel.graphCountSave(countFlag: &weekCountFlag, numArray: "NumArray_w", elapsedNumber: elapsedWeeks)
         
-        backExtensionCounterModel.graphCountSave(countFlag: &monthCountFlag, numArray: "NumArray_m")
+        backExtensionCounterModel.graphCountSave(countFlag: &monthCountFlag, numArray: "NumArray_m", elapsedNumber: elapsedMonthes)
         
         backExtensionCounterModel.counter = 0
     }
