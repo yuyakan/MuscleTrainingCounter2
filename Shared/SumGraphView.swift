@@ -34,22 +34,22 @@ struct SumGraphView: View {
             if pickerSelection == 0{
                 if pickerSelection2 == 0{
                     LineView(data: sumGraphViewModel.backExtensionDaySumCount, title: "Sit-ups", legend: "Times / 1day")
-                        .padding()
-                        .padding(.vertical, height * 0.18)
+                        .scaleEffect(CGSize(width: 0.9, height: 0.9))
+                        .padding(.top, height * 0.18)
                         .onAppear(perform: {
                             sumGraphViewModel.displayBackExtensionDay()
                         })
                 }else if pickerSelection2 == 1 {
                     LineView(data: sumGraphViewModel.backExtensionWeekSumCount, title: "Sit-ups", legend: "Times / 1week")
-                        .padding()
-                        .padding(.vertical, height * 0.18)
+                        .scaleEffect(CGSize(width: 0.9, height: 0.9))
+                        .padding(.top, height * 0.18)
                         .onAppear(perform: {
                             sumGraphViewModel.displayBackExtensionWeek()
                         })
                 }else {
                     LineView(data: sumGraphViewModel.backExtensionMonthSumCount, title: "Sit-ups", legend: "Times / 1month")
-                        .padding()
-                        .padding(.vertical, height * 0.18)
+                        .scaleEffect(CGSize(width: 0.9, height: 0.9))
+                        .padding(.top, height * 0.18)
                         .onAppear(perform: {
                             sumGraphViewModel.displayBackExtensionMonth()
                         })
@@ -57,22 +57,22 @@ struct SumGraphView: View {
             }else {
                 if pickerSelection2 == 0{
                     LineView(data: sumGraphViewModel.squatsDaySumCount, title: "Push-ups", legend: "Times / 1day")
-                        .padding()
-                        .padding(.vertical, height * 0.18)
+                        .scaleEffect(CGSize(width: 0.9, height: 0.9))
+                        .padding(.top, height * 0.18)
                         .onAppear(perform: {
                             sumGraphViewModel.displaySquatsDay()
                         })
                 }else if pickerSelection2 == 1 {
                     LineView(data: sumGraphViewModel.squatsWeekSumCount, title: "Push-ups", legend: "Times / 1week")
-                        .padding()
-                        .padding(.vertical, height * 0.18)
+                        .scaleEffect(CGSize(width: 0.9, height: 0.9))
+                        .padding(.top, height * 0.18)
                         .onAppear(perform: {
                             sumGraphViewModel.displaySquatsWeek()
                         })
                 }else {
                     LineView(data: sumGraphViewModel.squatsMonthSumCount, title: "Push-ups", legend: "Times / 1month")
-                        .padding()
-                        .padding(.vertical, height * 0.18)
+                        .scaleEffect(CGSize(width: 0.9, height: 0.9))
+                        .padding(.top, height * 0.18)
                         .onAppear(perform: {
                             sumGraphViewModel.displaySquatsMonth()
                         })
@@ -84,29 +84,29 @@ struct SumGraphView: View {
                     if pickerSelection2 == 0{
                         Text("Total　：　\(Int(sumGraphViewModel.backExtensionDaySumCount.reduce(0, +)))")
                             .font(.largeTitle)
-                            .padding(.bottom, height * 0.05)
+                            .padding(.bottom, height * 0.022)
                     }else if pickerSelection2 == 1{
                         Text("Total　：　\(Int(sumGraphViewModel.backExtensionWeekSumCount.reduce(0, +)))")
                             .font(.largeTitle)
-                            .padding(.bottom, height * 0.05)
+                            .padding(.bottom, height * 0.022)
                     }else{
                         Text("Total　：　\(Int(sumGraphViewModel.backExtensionMonthSumCount.reduce(0, +)))")
                             .font(.largeTitle)
-                            .padding(.bottom, height * 0.05)
+                            .padding(.bottom, height * 0.022)
                     }
                 }else{
                     if pickerSelection2 == 0{
                         Text("Total　：　\(Int(sumGraphViewModel.squatsDaySumCount.reduce(0, +)))")
                             .font(.largeTitle)
-                            .padding(.bottom, height * 0.05)
+                            .padding(.bottom, height * 0.022)
                     }else if pickerSelection2 == 1{
                         Text("Total　：　\(Int(sumGraphViewModel.squatsWeekSumCount.reduce(0, +)))")
                             .font(.largeTitle)
-                            .padding(.bottom, height * 0.05)
+                            .padding(.bottom, height * 0.022)
                     }else{
                         Text("Total　：　\(Int(sumGraphViewModel.squatsMonthSumCount.reduce(0, +)))")
                             .font(.largeTitle)
-                            .padding(.bottom, height * 0.05)
+                            .padding(.bottom, height * 0.022)
                     }
                 }
             }

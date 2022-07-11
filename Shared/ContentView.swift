@@ -10,7 +10,7 @@ import SwiftUICharts
 
 struct ContentView: View {
     @State var tabIndex:Int = 0
-    @State var visit = UserDefaults.standard.bool(forKey: "visit")
+    @State var visit = !(UserDefaults.standard.bool(forKey: "visit"))
     var body: some View {
         VStack{
             TabView(selection: $tabIndex){
@@ -39,6 +39,7 @@ struct ContentView: View {
                 })
             BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")//テスト
                 .frame(height: 50)
+
         }
     }
 }
