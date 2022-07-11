@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 import AppTrackingTransparency
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -20,6 +21,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct MuscleTrainingCounter2App: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     init(){
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
                      ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
                             switch status {
