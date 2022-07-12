@@ -12,25 +12,54 @@ final class BackExtensionCounterModel {
     
     var sumPlusRotationRate : Double = 0.0
     var sumMinusRotationRate : Double = 0.0
-    var plusCountFlag = false
-    var minusCountFlag = true
+    var sumPlusAcceleration : Double = 0.0
+    var sumMinusAcceleration : Double = 0.0
+    
+    var accelPlusCountFlag = true
+    var accelMinusCountFlag = false
+    
+    var rotatePlusCountFlag = true
+    var rotateMinusCountFlag = false
     
     func countCalculation(data: CMDeviceMotion) {
         let x = data.rotationRate.x
-        if (x > 0.0 && plusCountFlag == true){
+        let z = data.userAcceleration.z
+        
+        if (x > 0.0 && rotatePlusCountFlag == true){
             sumPlusRotationRate += x
-            print(sumPlusRotationRate)
-        }else if(x < 0.0 && minusCountFlag == true){
+        }else if(x < 0.0 && rotateMinusCountFlag == true){
             sumMinusRotationRate += x
         }
+    
+        if (z > 0.0 && accelPlusCountFlag == true){
+            sumPlusAcceleration += z
+        }else if(z < 0.0 && accelMinusCountFlag == true){
+            sumMinusAcceleration += z
+        }
+        
+        
         if (sumMinusRotationRate < -10.0){
-            plusCountFlag = true
+            rotatePlusCountFlag = true
+            rotateMinusCountFlag = false
             sumMinusRotationRate = 0.0
             sumPlusRotationRate = 0.0
         }
-        if (sumPlusRotationRate > 10.0 && plusCountFlag == true){
-            plusCountFlag = false
-            minusCountFlag = true
+        if (sumMinusAcceleration < -1.0){
+            accelMinusCountFlag = false
+            accelPlusCountFlag = true
+            
+            sumMinusAcceleration = 0.0
+            sumPlusAcceleration = 0.0
+        }
+        
+        
+        if (sumPlusRotationRate > 10.0) || (sumPlusAcceleration > 1.5){
+            accelPlusCountFlag = false
+            accelMinusCountFlag = true
+            rotatePlusCountFlag = false
+            rotateMinusCountFlag = true
+            sumPlusAcceleration = 0.0
+            sumMinusAcceleration = 0.0
             sumPlusRotationRate = 0.0
             sumMinusRotationRate = 0.0
             
@@ -41,8 +70,12 @@ final class BackExtensionCounterModel {
     func stopCaluculation() {
         sumPlusRotationRate = 0
         sumMinusRotationRate = 0
-        plusCountFlag = false
-        minusCountFlag = true
+        sumPlusAcceleration = 0.0
+        sumMinusAcceleration = 0.0
+        accelPlusCountFlag = true
+        accelMinusCountFlag = false
+        rotatePlusCountFlag = true
+        rotateMinusCountFlag = false
     }
     
     

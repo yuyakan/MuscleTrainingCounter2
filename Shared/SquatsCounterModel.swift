@@ -12,8 +12,8 @@ final class SquatsCounterModel {
     
     var sumPlusAcceleration : Double = 0
     var sumMinusAcceleration : Double = 0
-    var plusCountFlag = true
-    var minusCountFlag = false
+    var plusCountFlag = false
+    var minusCountFlag = true
     
     func countCalculation(data: CMDeviceMotion) {
         
@@ -24,14 +24,15 @@ final class SquatsCounterModel {
         }else if(z < 0.0 && minusCountFlag == true){
             sumMinusAcceleration += z
         }
-        if (sumPlusAcceleration > 2.0){
-            minusCountFlag = true
+        if (sumMinusAcceleration < -1.0){
+            minusCountFlag = false
+            plusCountFlag = true
             sumPlusAcceleration = 0.0
             sumMinusAcceleration = 0.0
         }
-        if (sumMinusAcceleration < -3.0 && minusCountFlag == true){
-            plusCountFlag = true
-            minusCountFlag = false
+        if (sumPlusAcceleration > 1.0){
+            plusCountFlag = false
+            minusCountFlag = true
             sumPlusAcceleration = 0.0
             sumMinusAcceleration = 0.0
             
@@ -42,8 +43,8 @@ final class SquatsCounterModel {
     func stopCaluculation() {
         sumPlusAcceleration = 0
         sumMinusAcceleration = 0
-        plusCountFlag = true
-        minusCountFlag = false
+        plusCountFlag = false
+        minusCountFlag = true
     }
     
     
