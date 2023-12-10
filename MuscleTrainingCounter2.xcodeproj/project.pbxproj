@@ -1,0 +1,1009 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B8E874011DF68E9642BB2E2 /* Pods_MuscleTrainingCounter2__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045C5FA0144AE88813404813 /* Pods_MuscleTrainingCounter2__macOS_.framework */; };
+		4B07076C285045C7002C9431 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07076B285045C7002C9431 /* DotView.swift */; };
+		4B07076D285045C7002C9431 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07076B285045C7002C9431 /* DotView.swift */; };
+		4B07077128504B35002C9431 /* SquatsCounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077028504B35002C9431 /* SquatsCounterModel.swift */; };
+		4B07077228504B35002C9431 /* SquatsCounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077028504B35002C9431 /* SquatsCounterModel.swift */; };
+		4B07077428505069002C9431 /* SumGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077328505069002C9431 /* SumGraphViewModel.swift */; };
+		4B07077528505069002C9431 /* SumGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077328505069002C9431 /* SumGraphViewModel.swift */; };
+		4B070777285054FC002C9431 /* BackExtensionCounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B070776285054FC002C9431 /* BackExtensionCounterModel.swift */; };
+		4B070778285054FC002C9431 /* BackExtensionCounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B070776285054FC002C9431 /* BackExtensionCounterModel.swift */; };
+		4B07077A28505A0E002C9431 /* SetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077928505A0E002C9431 /* SetUp.swift */; };
+		4B07077B28505A0E002C9431 /* SetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07077928505A0E002C9431 /* SetUp.swift */; };
+		4B2FE2F727D8E8AB007B77E6 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE2F627D8E8AB007B77E6 /* Tests_iOS.swift */; };
+		4B2FE2F927D8E8AB007B77E6 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE2F827D8E8AB007B77E6 /* Tests_iOSLaunchTests.swift */; };
+		4B2FE30327D8E8AB007B77E6 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE30227D8E8AB007B77E6 /* Tests_macOS.swift */; };
+		4B2FE30527D8E8AB007B77E6 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE30427D8E8AB007B77E6 /* Tests_macOSLaunchTests.swift */; };
+		4B2FE30627D8E8AB007B77E6 /* MuscleTrainingCounter2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE2DE27D8E8A9007B77E6 /* MuscleTrainingCounter2App.swift */; };
+		4B2FE30727D8E8AB007B77E6 /* MuscleTrainingCounter2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE2DE27D8E8A9007B77E6 /* MuscleTrainingCounter2App.swift */; };
+		4B2FE30827D8E8AB007B77E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE2DF27D8E8A9007B77E6 /* ContentView.swift */; };
+		4B2FE30927D8E8AB007B77E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE2DF27D8E8A9007B77E6 /* ContentView.swift */; };
+		4B2FE30A27D8E8AB007B77E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */; };
+		4B2FE30B27D8E8AB007B77E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */; };
+		4B2FE31B27D8F1AC007B77E6 /* BackExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31A27D8F1AC007B77E6 /* BackExtensionViewController.swift */; };
+		4B2FE31C27D8F1AC007B77E6 /* BackExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31A27D8F1AC007B77E6 /* BackExtensionViewController.swift */; };
+		4B2FE31E27D8F1D6007B77E6 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */; };
+		4B2FE31F27D8F1D6007B77E6 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */; };
+		4B2FE32127D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */; };
+		4B2FE32227D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */; };
+		4B2FE32427D8F1FE007B77E6 /* CompleteTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32327D8F1FE007B77E6 /* CompleteTutorialView.swift */; };
+		4B2FE32527D8F1FE007B77E6 /* CompleteTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32327D8F1FE007B77E6 /* CompleteTutorialView.swift */; };
+		4B2FE32727D8F222007B77E6 /* BackExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */; };
+		4B2FE32827D8F222007B77E6 /* BackExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */; };
+		4B2FE32A27D8F235007B77E6 /* SquatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32927D8F235007B77E6 /* SquatsView.swift */; };
+		4B2FE32B27D8F235007B77E6 /* SquatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32927D8F235007B77E6 /* SquatsView.swift */; };
+		4B2FE32D27D8F254007B77E6 /* SumGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */; };
+		4B2FE32E27D8F254007B77E6 /* SumGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */; };
+		4B2FE33027D8F269007B77E6 /* SquatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32F27D8F269007B77E6 /* SquatsViewController.swift */; };
+		4B2FE33127D8F269007B77E6 /* SquatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FE32F27D8F269007B77E6 /* SquatsViewController.swift */; };
+		4BBF1AFB2B2051990083B2CA /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF1AFA2B2051990083B2CA /* BannerAd.swift */; };
+		4BBF1AFD2B2051D30083B2CA /* InterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF1AFC2B2051D30083B2CA /* InterstitialAd.swift */; };
+		4BBF1AFF2B2058EB0083B2CA /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF1AFE2B2058EB0083B2CA /* GraphView.swift */; };
+		4BBF1B012B2058FF0083B2CA /* SpanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF1B002B2058FF0083B2CA /* SpanType.swift */; };
+		4BBF1B032B20590F0083B2CA /* TrainingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF1B022B20590F0083B2CA /* TrainingType.swift */; };
+		4BBF1B072B2064760083B2CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF1B0A2B2064760083B2CA /* Localizable.strings */; };
+		4BBF1B082B2064760083B2CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF1B0A2B2064760083B2CA /* Localizable.strings */; };
+		4E06EC98C408E1B24EAB8E6C /* Pods_MuscleTrainingCounter2__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA3A9DA32587666F7C12EA7 /* Pods_MuscleTrainingCounter2__iOS_.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B2FE2F327D8E8AB007B77E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B2FE2D927D8E8A9007B77E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B2FE2E427D8E8AB007B77E6;
+			remoteInfo = "MuscleTrainingCounter2 (iOS)";
+		};
+		4B2FE2FF27D8E8AB007B77E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B2FE2D927D8E8A9007B77E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B2FE2EA27D8E8AB007B77E6;
+			remoteInfo = "MuscleTrainingCounter2 (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		045C5FA0144AE88813404813 /* Pods_MuscleTrainingCounter2__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleTrainingCounter2__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DA3A9DA32587666F7C12EA7 /* Pods_MuscleTrainingCounter2__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleTrainingCounter2__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B07076B285045C7002C9431 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
+		4B07077028504B35002C9431 /* SquatsCounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsCounterModel.swift; sourceTree = "<group>"; };
+		4B07077328505069002C9431 /* SumGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumGraphViewModel.swift; sourceTree = "<group>"; };
+		4B070776285054FC002C9431 /* BackExtensionCounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackExtensionCounterModel.swift; sourceTree = "<group>"; };
+		4B07077928505A0E002C9431 /* SetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUp.swift; sourceTree = "<group>"; };
+		4B2FE2DE27D8E8A9007B77E6 /* MuscleTrainingCounter2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleTrainingCounter2App.swift; sourceTree = "<group>"; };
+		4B2FE2DF27D8E8A9007B77E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B2FE2E527D8E8AB007B77E6 /* MuscleTrainingCounter2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleTrainingCounter2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2FE2EB27D8E8AB007B77E6 /* MuscleTrainingCounter2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleTrainingCounter2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2FE2ED27D8E8AB007B77E6 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		4B2FE2F227D8E8AB007B77E6 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2FE2F627D8E8AB007B77E6 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		4B2FE2F827D8E8AB007B77E6 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		4B2FE2FE27D8E8AB007B77E6 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2FE30227D8E8AB007B77E6 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		4B2FE30427D8E8AB007B77E6 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		4B2FE31A27D8F1AC007B77E6 /* BackExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackExtensionViewController.swift; sourceTree = "<group>"; };
+		4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirpodsSettingTutorialView.swift; sourceTree = "<group>"; };
+		4B2FE32327D8F1FE007B77E6 /* CompleteTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTutorialView.swift; sourceTree = "<group>"; };
+		4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackExtensionView.swift; sourceTree = "<group>"; };
+		4B2FE32927D8F235007B77E6 /* SquatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsView.swift; sourceTree = "<group>"; };
+		4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumGraphView.swift; sourceTree = "<group>"; };
+		4B2FE32F27D8F269007B77E6 /* SquatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsViewController.swift; sourceTree = "<group>"; };
+		4B49E82E287BDB1B00D21BEF /* MuscleTrainingCounter2--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MuscleTrainingCounter2--iOS--Info.plist"; sourceTree = "<group>"; };
+		4BBF1AFA2B2051990083B2CA /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		4BBF1AFC2B2051D30083B2CA /* InterstitialAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAd.swift; sourceTree = "<group>"; };
+		4BBF1AFE2B2058EB0083B2CA /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		4BBF1B002B2058FF0083B2CA /* SpanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanType.swift; sourceTree = "<group>"; };
+		4BBF1B022B20590F0083B2CA /* TrainingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingType.swift; sourceTree = "<group>"; };
+		4BBF1B092B2064760083B2CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4BBF1B0B2B2064770083B2CA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4BBF1B0C2B20647B0083B2CA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4BBF1B0D2B20647C0083B2CA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4BBF1B0E2B20647D0083B2CA /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4BBF1B0F2B20647E0083B2CA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4BBF1B102B2064810083B2CA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4BBF1B112B2064820083B2CA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5F1379945F0723F7D2A8EBE7 /* Pods-MuscleTrainingCounter2 (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleTrainingCounter2 (iOS).debug.xcconfig"; path = "Target Support Files/Pods-MuscleTrainingCounter2 (iOS)/Pods-MuscleTrainingCounter2 (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		732FAF58B4DFB2B6AA8F7CEE /* Pods-MuscleTrainingCounter2 (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleTrainingCounter2 (macOS).debug.xcconfig"; path = "Target Support Files/Pods-MuscleTrainingCounter2 (macOS)/Pods-MuscleTrainingCounter2 (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		A29FAA7F988ADC3FFB77D01D /* Pods-MuscleTrainingCounter2 (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleTrainingCounter2 (macOS).release.xcconfig"; path = "Target Support Files/Pods-MuscleTrainingCounter2 (macOS)/Pods-MuscleTrainingCounter2 (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		B27264500A29150A2479DF41 /* Pods-MuscleTrainingCounter2 (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleTrainingCounter2 (iOS).release.xcconfig"; path = "Target Support Files/Pods-MuscleTrainingCounter2 (iOS)/Pods-MuscleTrainingCounter2 (iOS).release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B2FE2E227D8E8AB007B77E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E06EC98C408E1B24EAB8E6C /* Pods_MuscleTrainingCounter2__iOS_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B2FE2E827D8E8AB007B77E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8E874011DF68E9642BB2E2 /* Pods_MuscleTrainingCounter2__macOS_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B2FE2EF27D8E8AB007B77E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B2FE2FB27D8E8AB007B77E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A5041EF4C77AC686CEFE9D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DA3A9DA32587666F7C12EA7 /* Pods_MuscleTrainingCounter2__iOS_.framework */,
+				045C5FA0144AE88813404813 /* Pods_MuscleTrainingCounter2__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B07076E28504644002C9431 /* Squats */ = {
+			isa = PBXGroup;
+			children = (
+				4B07077028504B35002C9431 /* SquatsCounterModel.swift */,
+				4B2FE32927D8F235007B77E6 /* SquatsView.swift */,
+				4B2FE32F27D8F269007B77E6 /* SquatsViewController.swift */,
+			);
+			path = Squats;
+			sourceTree = "<group>";
+		};
+		4B07076F2850465F002C9431 /* BackExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4B070776285054FC002C9431 /* BackExtensionCounterModel.swift */,
+				4B2FE31A27D8F1AC007B77E6 /* BackExtensionViewController.swift */,
+				4B2FE32627D8F222007B77E6 /* BackExtensionView.swift */,
+			);
+			path = BackExtension;
+			sourceTree = "<group>";
+		};
+		4B2FE2D827D8E8A9007B77E6 = {
+			isa = PBXGroup;
+			children = (
+				4B49E82E287BDB1B00D21BEF /* MuscleTrainingCounter2--iOS--Info.plist */,
+				4B2FE2DD27D8E8A9007B77E6 /* Shared */,
+				4B2FE2EC27D8E8AB007B77E6 /* macOS */,
+				4B2FE2F527D8E8AB007B77E6 /* Tests iOS */,
+				4B2FE30127D8E8AB007B77E6 /* Tests macOS */,
+				4B2FE2E627D8E8AB007B77E6 /* Products */,
+				6FA6236AE58A312D831B2BE5 /* Pods */,
+				2A5041EF4C77AC686CEFE9D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4B2FE2DD27D8E8A9007B77E6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4B2FE2DE27D8E8A9007B77E6 /* MuscleTrainingCounter2App.swift */,
+				4B07077928505A0E002C9431 /* SetUp.swift */,
+				4B2FE2DF27D8E8A9007B77E6 /* ContentView.swift */,
+				4B93F9142833B83C0076288F /* Tutorial */,
+				4B07076F2850465F002C9431 /* BackExtension */,
+				4B07076E28504644002C9431 /* Squats */,
+				4BBF1AF82B2051210083B2CA /* GraphView */,
+				4BBF1AF92B2051750083B2CA /* Ad */,
+				4BBF1B0A2B2064760083B2CA /* Localizable.strings */,
+				4B2FE2E027D8E8AB007B77E6 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4B2FE2E627D8E8AB007B77E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B2FE2E527D8E8AB007B77E6 /* MuscleTrainingCounter2.app */,
+				4B2FE2EB27D8E8AB007B77E6 /* MuscleTrainingCounter2.app */,
+				4B2FE2F227D8E8AB007B77E6 /* Tests iOS.xctest */,
+				4B2FE2FE27D8E8AB007B77E6 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B2FE2EC27D8E8AB007B77E6 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				4B2FE2ED27D8E8AB007B77E6 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		4B2FE2F527D8E8AB007B77E6 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4B2FE2F627D8E8AB007B77E6 /* Tests_iOS.swift */,
+				4B2FE2F827D8E8AB007B77E6 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		4B2FE30127D8E8AB007B77E6 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				4B2FE30227D8E8AB007B77E6 /* Tests_macOS.swift */,
+				4B2FE30427D8E8AB007B77E6 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		4B93F9142833B83C0076288F /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				4B07076B285045C7002C9431 /* DotView.swift */,
+				4B2FE31D27D8F1D6007B77E6 /* TutorialView.swift */,
+				4B2FE32027D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift */,
+				4B2FE32327D8F1FE007B77E6 /* CompleteTutorialView.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		4BBF1AF82B2051210083B2CA /* GraphView */ = {
+			isa = PBXGroup;
+			children = (
+				4B07077328505069002C9431 /* SumGraphViewModel.swift */,
+				4B2FE32C27D8F254007B77E6 /* SumGraphView.swift */,
+				4BBF1AFE2B2058EB0083B2CA /* GraphView.swift */,
+				4BBF1B002B2058FF0083B2CA /* SpanType.swift */,
+				4BBF1B022B20590F0083B2CA /* TrainingType.swift */,
+			);
+			path = GraphView;
+			sourceTree = "<group>";
+		};
+		4BBF1AF92B2051750083B2CA /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				4BBF1AFA2B2051990083B2CA /* BannerAd.swift */,
+				4BBF1AFC2B2051D30083B2CA /* InterstitialAd.swift */,
+			);
+			path = Ad;
+			sourceTree = "<group>";
+		};
+		6FA6236AE58A312D831B2BE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F1379945F0723F7D2A8EBE7 /* Pods-MuscleTrainingCounter2 (iOS).debug.xcconfig */,
+				B27264500A29150A2479DF41 /* Pods-MuscleTrainingCounter2 (iOS).release.xcconfig */,
+				732FAF58B4DFB2B6AA8F7CEE /* Pods-MuscleTrainingCounter2 (macOS).debug.xcconfig */,
+				A29FAA7F988ADC3FFB77D01D /* Pods-MuscleTrainingCounter2 (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B2FE2E427D8E8AB007B77E6 /* MuscleTrainingCounter2 (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B2FE30E27D8E8AB007B77E6 /* Build configuration list for PBXNativeTarget "MuscleTrainingCounter2 (iOS)" */;
+			buildPhases = (
+				C151496EE5432121CB6F2955 /* [CP] Check Pods Manifest.lock */,
+				4B2FE2E127D8E8AB007B77E6 /* Sources */,
+				4B2FE2E227D8E8AB007B77E6 /* Frameworks */,
+				4B2FE2E327D8E8AB007B77E6 /* Resources */,
+				2729D92B4ACAAD1A9B24AC18 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MuscleTrainingCounter2 (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "MuscleTrainingCounter2 (iOS)";
+			productReference = 4B2FE2E527D8E8AB007B77E6 /* MuscleTrainingCounter2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B2FE2EA27D8E8AB007B77E6 /* MuscleTrainingCounter2 (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B2FE31127D8E8AB007B77E6 /* Build configuration list for PBXNativeTarget "MuscleTrainingCounter2 (macOS)" */;
+			buildPhases = (
+				6949C9F511F4FC6F5B80944A /* [CP] Check Pods Manifest.lock */,
+				4B2FE2E727D8E8AB007B77E6 /* Sources */,
+				4B2FE2E827D8E8AB007B77E6 /* Frameworks */,
+				4B2FE2E927D8E8AB007B77E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MuscleTrainingCounter2 (macOS)";
+			productName = "MuscleTrainingCounter2 (macOS)";
+			productReference = 4B2FE2EB27D8E8AB007B77E6 /* MuscleTrainingCounter2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B2FE2F127D8E8AB007B77E6 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B2FE31427D8E8AB007B77E6 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				4B2FE2EE27D8E8AB007B77E6 /* Sources */,
+				4B2FE2EF27D8E8AB007B77E6 /* Frameworks */,
+				4B2FE2F027D8E8AB007B77E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B2FE2F427D8E8AB007B77E6 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 4B2FE2F227D8E8AB007B77E6 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4B2FE2FD27D8E8AB007B77E6 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B2FE31727D8E8AB007B77E6 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				4B2FE2FA27D8E8AB007B77E6 /* Sources */,
+				4B2FE2FB27D8E8AB007B77E6 /* Frameworks */,
+				4B2FE2FC27D8E8AB007B77E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B2FE30027D8E8AB007B77E6 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 4B2FE2FE27D8E8AB007B77E6 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B2FE2D927D8E8A9007B77E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4B2FE2E427D8E8AB007B77E6 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4B2FE2EA27D8E8AB007B77E6 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4B2FE2F127D8E8AB007B77E6 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4B2FE2E427D8E8AB007B77E6;
+					};
+					4B2FE2FD27D8E8AB007B77E6 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4B2FE2EA27D8E8AB007B77E6;
+					};
+				};
+			};
+			buildConfigurationList = 4B2FE2DC27D8E8A9007B77E6 /* Build configuration list for PBXProject "MuscleTrainingCounter2" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+				de,
+				ja,
+				"pt-BR",
+				ko,
+				ru,
+				es,
+			);
+			mainGroup = 4B2FE2D827D8E8A9007B77E6;
+			packageReferences = (
+			);
+			productRefGroup = 4B2FE2E627D8E8AB007B77E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B2FE2E427D8E8AB007B77E6 /* MuscleTrainingCounter2 (iOS) */,
+				4B2FE2EA27D8E8AB007B77E6 /* MuscleTrainingCounter2 (macOS) */,
+				4B2FE2F127D8E8AB007B77E6 /* Tests iOS */,
+				4B2FE2FD27D8E8AB007B77E6 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B2FE2E327D8E8AB007B77E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2FE30A27D8E8AB007B77E6 /* Assets.xcassets in Resources */,
+				4BBF1B072B2064760083B2CA /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B2FE2E927D8E8AB007B77E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2FE30B27D8E8AB007B77E6 /* Assets.xcassets in Resources */,
+				4BBF1B082B2064760083B2CA /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B2FE2F027D8E8AB007B77E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B2FE2FC27D8E8AB007B77E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2729D92B4ACAAD1A9B24AC18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleTrainingCounter2 (iOS)/Pods-MuscleTrainingCounter2 (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleTrainingCounter2 (iOS)/Pods-MuscleTrainingCounter2 (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuscleTrainingCounter2 (iOS)/Pods-MuscleTrainingCounter2 (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6949C9F511F4FC6F5B80944A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleTrainingCounter2 (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C151496EE5432121CB6F2955 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleTrainingCounter2 (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B2FE2E127D8E8AB007B77E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2FE31E27D8F1D6007B77E6 /* TutorialView.swift in Sources */,
+				4BBF1AFD2B2051D30083B2CA /* InterstitialAd.swift in Sources */,
+				4B2FE32427D8F1FE007B77E6 /* CompleteTutorialView.swift in Sources */,
+				4B07077A28505A0E002C9431 /* SetUp.swift in Sources */,
+				4B2FE31B27D8F1AC007B77E6 /* BackExtensionViewController.swift in Sources */,
+				4BBF1AFB2B2051990083B2CA /* BannerAd.swift in Sources */,
+				4B2FE30827D8E8AB007B77E6 /* ContentView.swift in Sources */,
+				4B2FE32727D8F222007B77E6 /* BackExtensionView.swift in Sources */,
+				4B07076C285045C7002C9431 /* DotView.swift in Sources */,
+				4B2FE32127D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */,
+				4B2FE32D27D8F254007B77E6 /* SumGraphView.swift in Sources */,
+				4BBF1B032B20590F0083B2CA /* TrainingType.swift in Sources */,
+				4BBF1AFF2B2058EB0083B2CA /* GraphView.swift in Sources */,
+				4B2FE33027D8F269007B77E6 /* SquatsViewController.swift in Sources */,
+				4B07077128504B35002C9431 /* SquatsCounterModel.swift in Sources */,
+				4B2FE30627D8E8AB007B77E6 /* MuscleTrainingCounter2App.swift in Sources */,
+				4B07077428505069002C9431 /* SumGraphViewModel.swift in Sources */,
+				4B2FE32A27D8F235007B77E6 /* SquatsView.swift in Sources */,
+				4BBF1B012B2058FF0083B2CA /* SpanType.swift in Sources */,
+				4B070777285054FC002C9431 /* BackExtensionCounterModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B2FE2E727D8E8AB007B77E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2FE31F27D8F1D6007B77E6 /* TutorialView.swift in Sources */,
+				4B2FE32527D8F1FE007B77E6 /* CompleteTutorialView.swift in Sources */,
+				4B07077B28505A0E002C9431 /* SetUp.swift in Sources */,
+				4B2FE31C27D8F1AC007B77E6 /* BackExtensionViewController.swift in Sources */,
+				4B2FE30927D8E8AB007B77E6 /* ContentView.swift in Sources */,
+				4B2FE32827D8F222007B77E6 /* BackExtensionView.swift in Sources */,
+				4B07076D285045C7002C9431 /* DotView.swift in Sources */,
+				4B2FE32227D8F1EC007B77E6 /* AirpodsSettingTutorialView.swift in Sources */,
+				4B2FE32E27D8F254007B77E6 /* SumGraphView.swift in Sources */,
+				4B2FE33127D8F269007B77E6 /* SquatsViewController.swift in Sources */,
+				4B07077228504B35002C9431 /* SquatsCounterModel.swift in Sources */,
+				4B2FE30727D8E8AB007B77E6 /* MuscleTrainingCounter2App.swift in Sources */,
+				4B07077528505069002C9431 /* SumGraphViewModel.swift in Sources */,
+				4B2FE32B27D8F235007B77E6 /* SquatsView.swift in Sources */,
+				4B070778285054FC002C9431 /* BackExtensionCounterModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B2FE2EE27D8E8AB007B77E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2FE2F927D8E8AB007B77E6 /* Tests_iOSLaunchTests.swift in Sources */,
+				4B2FE2F727D8E8AB007B77E6 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B2FE2FA27D8E8AB007B77E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2FE30527D8E8AB007B77E6 /* Tests_macOSLaunchTests.swift in Sources */,
+				4B2FE30327D8E8AB007B77E6 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B2FE2F427D8E8AB007B77E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B2FE2E427D8E8AB007B77E6 /* MuscleTrainingCounter2 (iOS) */;
+			targetProxy = 4B2FE2F327D8E8AB007B77E6 /* PBXContainerItemProxy */;
+		};
+		4B2FE30027D8E8AB007B77E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B2FE2EA27D8E8AB007B77E6 /* MuscleTrainingCounter2 (macOS) */;
+			targetProxy = 4B2FE2FF27D8E8AB007B77E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4BBF1B0A2B2064760083B2CA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BBF1B092B2064760083B2CA /* en */,
+				4BBF1B0B2B2064770083B2CA /* zh-Hans */,
+				4BBF1B0C2B20647B0083B2CA /* de */,
+				4BBF1B0D2B20647C0083B2CA /* ja */,
+				4BBF1B0E2B20647D0083B2CA /* ko */,
+				4BBF1B0F2B20647E0083B2CA /* pt-BR */,
+				4BBF1B102B2064810083B2CA /* ru */,
+				4BBF1B112B2064820083B2CA /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B2FE30C27D8E8AB007B77E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B2FE30D27D8E8AB007B77E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4B2FE30F27D8E8AB007B77E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F1379945F0723F7D2A8EBE7 /* Pods-MuscleTrainingCounter2 (iOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NGCBTHK5K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MuscleTrainingCounter2--iOS--Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Get acceleration data by Airpods";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = kanbe1365.MuscleTrainingCounter2;
+				PRODUCT_NAME = MuscleTrainingCounter2;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B2FE31027D8E8AB007B77E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27264500A29150A2479DF41 /* Pods-MuscleTrainingCounter2 (iOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NGCBTHK5K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MuscleTrainingCounter2--iOS--Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Get acceleration data by Airpods";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = kanbe1365.MuscleTrainingCounter2;
+				PRODUCT_NAME = MuscleTrainingCounter2;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B2FE31227D8E8AB007B77E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 732FAF58B4DFB2B6AA8F7CEE /* Pods-MuscleTrainingCounter2 (macOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 2NGCBTHK5K;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = kanbe1365.MuscleTrainingCounter2;
+				PRODUCT_NAME = MuscleTrainingCounter2;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4B2FE31327D8E8AB007B77E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A29FAA7F988ADC3FFB77D01D /* Pods-MuscleTrainingCounter2 (macOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 2NGCBTHK5K;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = kanbe1365.MuscleTrainingCounter2;
+				PRODUCT_NAME = MuscleTrainingCounter2;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4B2FE31527D8E8AB007B77E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NGCBTHK5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kanbe1365.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MuscleTrainingCounter2 (iOS)";
+			};
+			name = Debug;
+		};
+		4B2FE31627D8E8AB007B77E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NGCBTHK5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kanbe1365.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MuscleTrainingCounter2 (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B2FE31827D8E8AB007B77E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 2NGCBTHK5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kanbe1365.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "MuscleTrainingCounter2 (macOS)";
+			};
+			name = Debug;
+		};
+		4B2FE31927D8E8AB007B77E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 2NGCBTHK5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kanbe1365.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "MuscleTrainingCounter2 (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B2FE2DC27D8E8A9007B77E6 /* Build configuration list for PBXProject "MuscleTrainingCounter2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B2FE30C27D8E8AB007B77E6 /* Debug */,
+				4B2FE30D27D8E8AB007B77E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B2FE30E27D8E8AB007B77E6 /* Build configuration list for PBXNativeTarget "MuscleTrainingCounter2 (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B2FE30F27D8E8AB007B77E6 /* Debug */,
+				4B2FE31027D8E8AB007B77E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B2FE31127D8E8AB007B77E6 /* Build configuration list for PBXNativeTarget "MuscleTrainingCounter2 (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B2FE31227D8E8AB007B77E6 /* Debug */,
+				4B2FE31327D8E8AB007B77E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B2FE31427D8E8AB007B77E6 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B2FE31527D8E8AB007B77E6 /* Debug */,
+				4B2FE31627D8E8AB007B77E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B2FE31727D8E8AB007B77E6 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B2FE31827D8E8AB007B77E6 /* Debug */,
+				4B2FE31927D8E8AB007B77E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B2FE2D927D8E8A9007B77E6 /* Project object */;
+}
